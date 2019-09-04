@@ -7,9 +7,9 @@ export PGDATA=/usr/local/var/postgres
 
 ## android studio
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export PATH=/Users/nishikawadaiki/Library/Android/sdk:$PATH
-export PATH=/Users/nishikawadaiki/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_HOME=/Users/nishikawadaiki/Library/Android/sdk
+export PATH=$HOME/Library/Android/sdk:$PATH
+export PATH=$HOME/Android/sdk/platform-tools:$PATH
+export ANDROID_HOME=$HOME/Library/Android/sdk
 
 ## python
 export PYENV_ROOT="$HOME/.pyenv"
