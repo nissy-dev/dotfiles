@@ -2,9 +2,6 @@
 ## nodejs
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-## postgres
-export PGDATA=/usr/local/var/postgres
-
 ## android studio
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export PATH=$HOME/Library/Android/sdk:$PATH

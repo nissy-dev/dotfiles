@@ -3,18 +3,18 @@ set encoding=utf-8
 scriptencoding utf-8
 set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp
 
-"show cusor
+"show cusor
 set ruler
-"show line number
+"show line number
 set number
 
-"background color
+"background color
 set background=dark
 "colorscheme
 let g:hybrid_use_iTerm_colors = 1
 colorscheme hybrid
 
-"hilight cursorline
+"hilight cursorline
 autocmd ColorScheme * highlight LineNr ctermfg=12
 highlight CursorLineNr ctermbg=4 ctermfg=0
 set cursorline
@@ -31,13 +31,13 @@ set tabstop=4
 set expandtab
 set smarttab
 
-"wrap long lines
+"wrap long lines
 set wrap
 
 "complement filename
 set wildmode=list:longest,full
 
-"show vim command
+"show vim command
 set showcmd
 
 "clipboard
@@ -52,7 +52,7 @@ set display=lastline
 "setting for backup files
 set nobackup
 
-"other
+"other
 set ignorecase
 set wrapscan
 set hlsearch
