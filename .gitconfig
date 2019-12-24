@@ -1,18 +1,20 @@
 [url "git@github.com:"]
 [user]
-	email = nd.12021218@gmail.com
-	name = nd-02110114
+  email = nd.12021218@gmail.com
+  name = nd-02110114
 [diff]
-	algorithm = histogram
-	renames = true
+  algorithm = histogram
+  renames = true
 [grep]
-	lineNumber = true
-	threads = 16
-	fallbackToNoIndex = true
+  lineNumber = true
+  threads = 16
+  fallbackToNoIndex = true
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+[core]
+  editor = vi
 [ghq]
-    root = ~/code
+  root = ~/code
