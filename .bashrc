@@ -20,8 +20,9 @@ export PATH=$HOME/.cargo/bin:$PATH
 export GOPATH=$HOME/.go
 
 # history 
-HISTSIZE=5000
-HISTFILESIZE=2000
+export HISTCONTROL=ignoreboth
+export HISTIGNORE="fg*:bg*:history*:cd*:jobs*"
+export HISTSIZE=10000
 
 # git setting
 if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
