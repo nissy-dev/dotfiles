@@ -5,6 +5,13 @@
 ```
 $ git clone https://github.com/nd-02110114/dotfiles.git
 $ cd dotfiles
-$ chmod +x setup.sh
-$ ./setup.sh
+
+# Install apps with Homebrew
+$ make brew
+
+# Install nodejs, python, rust with asdf
+$ make preinstall
+
+# Setup dotfiles
+$ make install
 ```
