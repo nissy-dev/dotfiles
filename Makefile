@@ -5,14 +5,12 @@ ASDF_DATA_DIR     := $(HOME)/.asdf
 
 .PHONY: brew
 brew:
-	/bin/bash -c '$(shell curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh;)'
-	[ $(shell uname) = 'Darwin' ] && brew bundle --file $(DOTFILES_DIR)/brewfiles/Brewfile.mac
-	[ $(shell uname) != 'Darwin' ] && $(DOTFILES_DIR)/linuxbrew_init.sh && brew bundle --file $(DOTFILES_DIR)/brewfiles/Brewfile.linux
+	. $(DOTFILES_DIR)/brew_setup.sh
 
 .PHONY: dotfiles
-install:
+dotfiles:
 	echo 'Setup dotfiles.'
-	$(DOTFILES_DIR)/deploy.sh
+	. $(DOTFILES_DIR)/deploy.sh
 	source ~/.zshrc
 
 .PHONY: asdf
@@ -26,4 +24,4 @@ asdf:
 .PHONY: mac
 mac:
 	echo 'Override the default settings on Mac.'
-	$(DOTFILES_DIR)/mac_setting_override.sh
+	. $(DOTFILES_DIR)/mac_setting_override.sh
