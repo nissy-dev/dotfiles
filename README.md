@@ -13,7 +13,6 @@ $ cd dotfiles
 $ make brew
 
 # dotfilesの設定
-$ make preinstall
 $ make install
 
 # 各言語をインストール
@@ -28,10 +27,10 @@ $ make mac
 ### ssh の設定
 秘密鍵の作成 -> GitHubなどへの登録
 
-### Git cz の設定
+### git cz の設定
 
 ```sh
-$ npm install -g commitizen git-cz
+$ asdf global nodejs x.x.x
 $ asdf reshim nodejs
-$ commitizen init git-cz --save-dev --save-exact
+$ npm install -g git-cz
 ```
