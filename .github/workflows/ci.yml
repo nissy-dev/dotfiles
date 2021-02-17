@@ -21,7 +21,7 @@ jobs:
     - name: brew install for MacOS
       if: runner.os == 'macOS'
       shell: zsh {0}
-      run: brew bundle -f ./brewfiles/mac
+      run: brew bundle -f ./brewfiles/Brewfile.mac
     - name: brew install for Linux
       if: runner.os == 'Linux'
       shell: zsh {0}
