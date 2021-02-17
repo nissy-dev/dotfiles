@@ -5,9 +5,9 @@ ASDF_DATA_DIR     := $(HOME)/.asdf
 
 .PHONY: brew
 brew:
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	[ "$(uname)" = 'Darwin' ] && brew bundle -f $(DOTFILES_DIR)/brewfiles/mac
-	[ "$(uname)" != 'Darwin' ] && $(DOTFILES_DIR)/linuxbrew_init.sh && brew bundle -f $(DOTFILES_DIR)/brewfiles/linux
+	/bin/bash -c $(shell curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
+	[ $(shell uname) = 'Darwin' ] && brew bundle --file $(DOTFILES_DIR)/brewfiles/Brewfile.mac
+	[ $(shell uname) != 'Darwin' ] && $(DOTFILES_DIR)/linuxbrew_init.sh && brew bundle --file $(DOTFILES_DIR)/brewfiles/Brewfile.linux
 
 .PHONY: install
 install:
