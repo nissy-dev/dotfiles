@@ -6,7 +6,6 @@
 if [ -d "$HOME/.asdf" ]; then
   # asdfで管理 (自分のPC用)
   . $HOME/.asdf/asdf.sh
-  . $HOME/.asdf/completions/asdf.bash
 else
   # asdfがなければ各ツールを自分で管理 (共有の計算サーバーとか)
   ## pyenv (python)
@@ -35,21 +34,22 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-# starship
+## starship
 if command -v starship 1>/dev/null 2>&1; then
-  eval "$(starship init bash)"
+  eval "$(starship init zsh)"
 fi
 
 ##################################
 # エイリアス
 ##################################
 
-alias virc='vi ~/.bashrc'
-alias uprc='source ~/.bashrc'
+alias virc='vi ~/.zshrc'
+alias uprc='source ~/.zshrc'
 
 ##################################
 # docker 関連のエイリアス
 ##################################
+
 alias d='docker'
 alias dc='docker-compose'
 alias dimg='docker images'
@@ -71,5 +71,10 @@ alias fork-update='git fetch upstream && git merge upstream/master'
 # マージ済みのブランチをローカルから削除
 alias br-clean='git branch --merged | grep -vE "^\*|master$|develop$|main$" | xargs -I % git branch -d %'
 
-# pecoの設定
-alias g='cd $(ghq root)/$(ghq list | peco)'
+##################################
+# 独自設定の読み込み
+##################################
+
+if [ -f ~/.zshrc.custom ]; then
+  source ~/.zshrc.custom
+fi
