@@ -2,7 +2,7 @@
 
 **注意：スクリプトは、Mac or Linuxで動かすことを想定して書いている**
 
-## 環境構築手順
+## 環境構築
 
 ```sh
 $ git clone https://github.com/nd-02110114/dotfiles.git
@@ -25,5 +25,5 @@ $ make mac
 
 ## その他
 
-- [ ] ssh の設定
-  - 秘密鍵の作成
+- ssh の設定
+  - 秘密鍵の作成 -> GitHubなどへの登録

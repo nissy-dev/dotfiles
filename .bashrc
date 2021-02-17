@@ -46,11 +46,29 @@ if command -v starship 1>/dev/null 2>&1; then
 fi
 
 ##################################
+# シェル全般の設定
+##################################
+
+# 連続した重複コマンドを履歴に残さない(ignoredups,ignorespace,erasedups)
+export HISTCONTROL=ignoreboth
+export HISTIGNORE="history*:cd*"
+export HISTSIZE=10000
+
+##################################
 # エイリアス
 ##################################
 
-alias virc='vi ~/.bashrc'
-alias uprc='source ~/.bashrc'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias ll='ls -alhF'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias df='df -h'
+alias grep='grep --color'
+alias virc='vi ~/.zshrc'
+alias uprc='source ~/.zshrc'
 
 ##################################
 # docker 関連のエイリアス
