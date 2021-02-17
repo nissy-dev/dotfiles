@@ -25,5 +25,13 @@ $ make mac
 
 ## その他
 
-- ssh の設定
-  - 秘密鍵の作成 -> GitHubなどへの登録
+### ssh の設定
+秘密鍵の作成 -> GitHubなどへの登録
+
+### Git cz の設定
+
+```sh
+$ npm install -g commitizen git-cz
+$ asdf reshim nodejs
+$ commitizen init git-cz --save-dev --save-exact
+```
