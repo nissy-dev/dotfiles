@@ -22,7 +22,6 @@ brew "pandoc"
 brew "postgresql", restart_service: true
 brew "pstree"
 brew "starship"
-brew "sshpass"
 brew "tmux"
 brew "tree"
 brew "watchman"

@@ -1,4 +1,4 @@
-# Dotfiles
+# dotfiles
 
 **注意：スクリプトは、Mac or Linuxで動かすことを想定して書いている**
 
@@ -13,7 +13,7 @@ $ cd dotfiles
 $ make brew
 
 # dotfilesの設定
-$ make install
+$ make dotfiles
 
 # 各言語をインストール
 $ make asdf
