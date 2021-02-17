@@ -21,7 +21,7 @@ jobs:
     - name: brew install for MacOS
       if: runner.os == 'macOS'
       shell: zsh {0}
-      run: 
+      run: |
         sed '/^mas/d' ./brewfiles/Brewfile.mac | sed '/^cask/d' > ./brewfiles/Brewfile.mac.tmp
         brew bundle --file ./brewfiles/Brewfile.mac.tmp
     - name: brew install for Linux
