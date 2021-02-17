@@ -5,7 +5,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 
 brew "asdf"
-brew "awscli"
+# brew "awscli" // Faild to brew link
 brew "coreutils"
 brew "curl"
 brew "fzf"
@@ -41,6 +41,6 @@ cask "slack"
 cask "visual-studio-code"
 cask "zoomus"
 
-mas 'LINE', id: 539883307
+mas "LINE", id: 539883307
 mas "Amphetamine", id: 937984704
 # mas "Magnet", id: 441258766
