@@ -2,13 +2,18 @@
 # PATHの追加やツールのセットアップ
 ##################################
 
+## Linuxbrew
+if [ "$(uname)" != 'Darwin' ]; then
+  . ~/linuxbrew_init.sh
+fi
+
 ## 各言語の設定
-if [ -d "$HOME/.asdf" ]; then
+if command -v asdf 1>/dev/null 2>&1; then
   # asdfで管理 (自分のPC用)
-  . $HOME/.asdf/asdf.sh
-  . $HOME/.asdf/completions/asdf.bash
+  . $(brew --prefix asdf)/asdf.sh
+  . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 else
-  # asdfがなければ各ツールを自分で管理 (共有の計算サーバーとか)
+  # asdfがなければ各ツールを自分で管理 (共有の計算サーバーなどの場合)
   ## pyenv (python)
   export PYENV_ROOT=$HOME/.pyenv
   if [ -d "$PYENV_ROOT" ]; then

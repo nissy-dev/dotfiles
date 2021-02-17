@@ -20,7 +20,10 @@ ln -sfnv ${DOTFILES_DIR}/.zshrc ~/.zshrc
 ln -sfnv ${DOTFILES_DIR}/starship.toml ~/.config/starship.toml
 
 if [ "$(uname)" = 'Darwin' ]; then
-  # For Mac
+  # for mac
   ln -sfnv ${DOTFILES_DIR}/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
   ln -sfnv ${DOTFILES_DIR}/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+else
+  # for linux
+  ln -sfnv ${DOTFILES_DIR}/linuxbrew_init.sh ~/linuxbrew_init.sh
 fi
