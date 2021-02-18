@@ -11,7 +11,6 @@ brew:
 dotfiles:
 	echo 'Setup dotfiles.'
 	$(DOTFILES_DIR)/deploy.sh
-	source ~/.zshrc
 
 .PHONY: asdf
 asdf:

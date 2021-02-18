@@ -39,6 +39,15 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+## google cloud sdk
+if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]
+  . $HOME/google-cloud-sdk/path.zsh.inc
+end
+
+if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]
+  . $HOME/google-cloud-sdk/completion.zsh.inc
+end
+
 ## starship
 if command -v starship 1>/dev/null 2>&1; then
   eval "$(starship init zsh)"
@@ -99,6 +108,65 @@ alias fork-update='git fetch upstream && git merge upstream/master'
 
 # マージ済みのブランチをローカルから削除
 alias br-clean='git branch --merged | grep -vE "^\*|master$|develop$|main$" | xargs -I % git branch -d %'
+
+
+##################################
+# fzf の便利関数
+##################################
+
+# fbr - checkout git branch (including remote branches), sorted by most recent commit, limit 30 last branches
+git-ck() {
+  local branches branch
+  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
+# Install one or more versions of specified language
+# e.g. `asdf-in rust` # => fzf multimode, tab to mark, enter to install
+asdf-in() {
+  local lang=${1}
+
+  if [[ ! $lang ]]; then
+    lang=$(asdf plugin-list | fzf)
+  fi
+
+  if [[ $lang ]]; then
+    local versions=$(asdf list-all $lang | tail -r | fzf -m)
+    if [[ $versions ]]; then
+      for version in $(echo $versions);
+      do; asdf install $lang $version; done;
+    fi
+  fi
+}
+
+# run npm script (requires jq)
+npmr() {
+  local script
+  script=$(cat package.json | jq -r '.scripts | keys[] ' | sort | fzf) && npm run $(echo "$script")
+}
+
+# ghq + fzf
+alias g='cd $(ghq root)/$(ghq list | fzf)'
+
+# fh - repeat history
+fh() {
+  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
+}
+
+# fd - cd to selected directory
+fcd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
+# port指定でプロセスを落とす
+kill-by-port() {
+  lsof -P | grep $1 | awk '{print $2}' | xargs kill -9
+}
 
 ##################################
 # 独自設定の読み込み

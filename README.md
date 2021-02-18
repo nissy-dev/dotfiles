@@ -14,6 +14,7 @@ $ make brew
 
 # dotfilesの設定
 $ make dotfiles
+$ source ~/.zshrc
 
 # 各言語をインストール
 $ make asdf
