@@ -40,13 +40,13 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 ## google cloud sdk
-if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]
+if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]; then
   . $HOME/google-cloud-sdk/path.zsh.inc
-end
+fi
 
-if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]
+if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]; then
   . $HOME/google-cloud-sdk/completion.zsh.inc
-end
+fi
 
 ## starship
 if command -v starship 1>/dev/null 2>&1; then
