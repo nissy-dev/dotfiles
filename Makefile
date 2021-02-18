@@ -5,12 +5,12 @@ ASDF_DATA_DIR     := $(HOME)/.asdf
 
 .PHONY: brew
 brew:
-	. $(DOTFILES_DIR)/brew_setup.sh
+	$(DOTFILES_DIR)/brew_setup.sh
 
 .PHONY: dotfiles
 dotfiles:
 	echo 'Setup dotfiles.'
-	. $(DOTFILES_DIR)/deploy.sh
+	$(DOTFILES_DIR)/deploy.sh
 	source ~/.zshrc
 
 .PHONY: asdf
@@ -24,4 +24,4 @@ asdf:
 .PHONY: mac
 mac:
 	echo 'Override the default settings on Mac.'
-	. $(DOTFILES_DIR)/mac_setting_override.sh
+	$(DOTFILES_DIR)/mac_setting_override.sh
