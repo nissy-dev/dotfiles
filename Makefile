@@ -23,4 +23,4 @@ asdf:
 .PHONY: mac
 mac:
 	echo 'Override the default settings on Mac.'
-	$(DOTFILES_DIR)/mac_setting_override.sh
+	$(DOTFILES_DIR)/osx_setting_override.sh
