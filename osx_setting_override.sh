@@ -104,7 +104,7 @@ defaults write com.apple.screencapture location ~/Downloads
 defaults write com.apple.screencapture name "SS_"
 
 # 画像に影を付けない
-defaults write com.apple.screencapture disable-shadow -boolean true
+defaults write com.apple.screencapture disable-shadow -bool true
 
 # 設定を反映
 killall SystemUIServer
