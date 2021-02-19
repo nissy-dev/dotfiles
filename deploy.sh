@@ -27,7 +27,7 @@ if [ "$(uname)" = 'Darwin' ]; then
   fi
 else
   # for linux
-  ln -sfnv $SCRIPT_DIR/linuxbrew_init.sh ~/linuxbrew_init.sh
+  ln -sfnv $SCRIPT_DIR/brew/linuxbrew_init.sh ~/linuxbrew_init.sh
   if [ -d ~/.config/Code/User ]; then
     ln -sfnv $SCRIPT_DIR/vscode/settings.json ~/.config/Code/User/settings.json
     ln -sfnv $SCRIPT_DIR/vscode/keybindings.json ~/.config/Code/User/keybindings.json

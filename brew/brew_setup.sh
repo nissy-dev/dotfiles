@@ -12,8 +12,8 @@ echo 'Install homebrew.'
 
 echo 'Install packages.'
 if [ "$(uname)" = 'Darwin' ]; then
-  brew bundle --file $SCRIPT_DIR/brewfiles/Brewfile.mac
+  brew bundle --file $SCRIPT_DIR/Brewfile.mac
 else
   . $SCRIPT_DIR/linuxbrew_init.sh
-  brew bundle --file $SCRIPT_DIR/brewfiles/Brewfile.linux
+  brew bundle --file $SCRIPT_DIR/Brewfile.linux
 fi

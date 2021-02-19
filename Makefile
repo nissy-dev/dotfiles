@@ -5,7 +5,7 @@ ASDF_DATA_DIR     := $(HOME)/.asdf
 
 .PHONY: brew
 brew:
-	$(DOTFILES_DIR)/brew_setup.sh
+	$(DOTFILES_DIR)/brew/brew_setup.sh
 
 .PHONY: dotfiles
 dotfiles:
@@ -24,3 +24,8 @@ asdf:
 mac:
 	echo 'Override the default settings on Mac.'
 	$(DOTFILES_DIR)/osx_setting_override.sh
+
+.PHONY: code
+code:
+	echo 'Manage vscode extensions.'
+	$(DOTFILES_DIR)/vscode/install_extension.sh

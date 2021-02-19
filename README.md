@@ -21,6 +21,9 @@ $ make asdf
 
 # macの設定の上書き
 $ make mac
+
+# vscodeの拡張機能の管理
+$ make code
 ```
 
 ## その他
