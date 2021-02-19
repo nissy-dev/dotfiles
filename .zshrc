@@ -75,6 +75,8 @@ setopt hist_reduce_blanks    # 余分な空白は詰めて記録
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias dl='cd ~/Downloads'
+alias dt='cd ~/Desktop'
 alias ll='ls -alhF'
 alias cp='cp -i'
 alias mv='mv -i'
