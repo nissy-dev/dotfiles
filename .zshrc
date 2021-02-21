@@ -3,7 +3,7 @@
 ##################################
 
 ## Linuxbrew
-if [ "$(uname)" != 'Darwin' ]; then
+if [ -f ~/linuxbrew_init.sh ]; then
   . ~/linuxbrew_init.sh
 fi
 
@@ -13,6 +13,7 @@ if command -v asdf 1>/dev/null 2>&1; then
   . $(brew --prefix asdf)/asdf.sh
 else
   # asdfがなければ各ツールを自分で管理 (共有の計算サーバーとか)
+
   ## pyenv (python)
   export PYENV_ROOT=$HOME/.pyenv
   if [ -d "$PYENV_ROOT" ]; then
@@ -21,11 +22,13 @@ else
       eval "$(pyenv init -)"
     fi
   fi
+
   ## nvm (nodejs)
   export NVM_DIR=$HOME/.nvm
   if [ -s "$NVM_DIR/nvm.sh" ]; then
     . $NVM_DIR/nvm.sh
   fi
+
 fi
 
 ## android studio
@@ -40,17 +43,22 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 ## google cloud sdk
-if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]; then
-  . $HOME/google-cloud-sdk/path.zsh.inc
+if [ -f ~/google-cloud-sdk/path.zsh.inc ]; then
+  . ~/google-cloud-sdk/path.zsh.inc
 fi
 
-if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]; then
-  . $HOME/google-cloud-sdk/completion.zsh.inc
+if [ -f ~/google-cloud-sdk/completion.zsh.inc ]; then
+  . ~/google-cloud-sdk/completion.zsh.inc
 fi
 
 ## starship
 if command -v starship 1>/dev/null 2>&1; then
   eval "$(starship init zsh)"
+fi
+
+## fzf
+if [ -f ~/.fzf.zsh ]; then
+  . ~/.fzf.zsh
 fi
 
 ##################################
