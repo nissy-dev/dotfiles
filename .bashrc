@@ -38,10 +38,13 @@ if [ "$(uname)" = 'Darwin' ]; then
 else
   export ANDROID_HOME=$HOME/Android/Sdk # for linux
 fi
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+if [ -d "$ANDROID_HOME" ]; then
+  export PATH=$PATH:$ANDROID_HOME/emulator
+  export PATH=$PATH:$ANDROID_HOME/tools
+  export PATH=$PATH:$ANDROID_HOME/tools/bin
+  export PATH=$PATH:$ANDROID_HOME/platform-tools
+fi
 
 ## google cloud sdk
 if [ -f ~/google-cloud-sdk/path.zsh.inc ]; then
