@@ -29,12 +29,15 @@ $ make code
 ## その他
 
 ### ssh の設定
-秘密鍵の作成 -> GitHubなどへの登録
+
+[Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+
+「Adding a new SSH key to your GitHub account」のページをみればよい
 
 ### git cz の設定
 
 ```sh
 $ asdf global nodejs x.x.x
-$ asdf reshim nodejs
 $ npm install -g git-cz
+$ asdf reshim nodejs
 ```
