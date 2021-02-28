@@ -41,4 +41,5 @@ jobs:
       if: runner.os == 'macOS'
       run: make mac
     - name: Install font
+      if: runner.os == 'Linux'
       run: make font
