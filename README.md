@@ -24,9 +24,19 @@ $ make mac
 
 # vscodeの拡張機能の管理
 $ make code
+
+# fontのインストール
+$ make font
 ```
 
 ## その他
+
+### 諸々のアップデート
+- ソフトウェア・アップデート
+  - (appleマーク) > このmacについて > ソフトウェアアップデート
+- App Store
+  - (appleマーク) > App Store > すべてアップデート
+  - `make brew`する前にログインしておく
 
 ### ssh の設定
 
