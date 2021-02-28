@@ -1,6 +1,7 @@
 {
     "window.zoomLevel": 0,
     "editor.tabSize": 2,
+    "edtior.fontFamily": "HackGenNerd, Menlo, Monaco, 'Courier New', monospace",
     "editor.renderIndentGuides": true,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",

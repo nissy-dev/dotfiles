@@ -40,3 +40,5 @@ jobs:
     - name: Override the default settings on Mac
       if: runner.os == 'macOS'
       run: make mac
+    - name: Install font
+      run: make font

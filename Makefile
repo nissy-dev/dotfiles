@@ -29,3 +29,8 @@ mac:
 code:
 	echo 'Manage vscode extensions.'
 	$(DOTFILES_DIR)/vscode/install_extension.sh
+
+.PHONY: font
+font:
+	echo 'Install font.'
+	$(DOTFILES_DIR)/install_font.sh
