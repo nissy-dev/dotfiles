@@ -1,7 +1,6 @@
 {
     /* window setting */
-    "window.zoomLevel": 0, // 画面全体の表示サイズ
-    "window.showFullPath": true, // フルパス表示
+    "window.zoomLevel": 0, // 画面全体の表示サイズs
     /* editor setting */
     "edtior.fontFamily": "HackGenNerd, Menlo, Monaco, 'Courier New', monospace",
     "editor.renderWhitespace": "all", // ホワイトスペース（半角スペース等）の表示
@@ -26,6 +25,7 @@
     /* other setting */
     "workbench.startupEditor": "none", // Welcome Page を表示しない
     "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.enablePreviewFromQuickOpen": false, // sQuick Openで開いたファイルはプレビューにしない
     "workbench.editor.enablePreview": false, // ビューからファイルを常に通常のエディタに開くようにする
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue", // 拡張機能のサジェストで上書きする
     /* markdown setting */
