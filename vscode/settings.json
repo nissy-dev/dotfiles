@@ -25,8 +25,8 @@
     /* other setting */
     "workbench.startupEditor": "none", // Welcome Page を表示しない
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.editor.enablePreviewFromQuickOpen": false, // sQuick Openで開いたファイルはプレビューにしない
-    "workbench.editor.enablePreview": false, // ビューからファイルを常に通常のエディタに開くようにする
+    "workbench.editor.enablePreviewFromQuickOpen": false, // Quick Openで開いたファイルはプレビューにしない
+    "workbench.editor.enablePreview": false, // プレビューからファイルを常に通常のエディタに開くようにする
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue", // 拡張機能のサジェストで上書きする
     /* markdown setting */
     "[markdown]": {
