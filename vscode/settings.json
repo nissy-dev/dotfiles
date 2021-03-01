@@ -1,34 +1,69 @@
 {
-    "window.zoomLevel": 0,
-    "editor.tabSize": 2,
+    /* window setting */
+    "window.zoomLevel": 0, // 画面全体の表示サイズ
+    "window.showFullPath": true, // フルパス表示
+    /* editor setting */
     "edtior.fontFamily": "HackGenNerd, Menlo, Monaco, 'Courier New', monospace",
-    "editor.renderIndentGuides": true,
-    "editor.minimap.enabled": false,
-    "editor.renderWhitespace": "all",
+    "editor.renderWhitespace": "all", // ホワイトスペース（半角スペース等）の表示
+    "editor.renderControlCharacters": true, // 制御文字表示
+    "editor.renderIndentGuides": true, // 現在行をガターを含めてハイライト
+    "editor.tabSize": 2,
+    "editor.suggestSelection": "first", // サジェストの表示方法
+    "editor.minimap.enabled": false,  // ミニマップを非表示
+    "diffEditor.renderSideBySide": false, // 差分を横に並べて表示ではなく行内に表示
+    /* files setting */
+    "files.trimTrailingWhitespace": true, // 余分なホワイトスペースを削除
+    "files.insertFinalNewline": true, // ファイルの末尾は改行で終わらせる
+    "files.trimFinalNewlines": true, // 保存時に最終行以降を削除
     "files.associations": {
-        "*.csh": "shellscript",
+        ".*lintrc": "json",
         "*.flow": "javascript"
     },
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    // javascript setting
-    "javascript.format.enable": false,
-    "javascript.validate.enable": false,
+    "files.watcherExclude": { // ファイルモニタリングから除外するファイル (重たいファイルを追加すると良い)
+        "**/.git/objects/**": true,
+        "**/node_modules/**": true
+    },
+    /* other setting */
+    "workbench.startupEditor": "none", // Welcome Page を表示しない
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.enablePreview": false, // ビューからファイルを常に通常のエディタに開くようにする
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue", // 拡張機能のサジェストで上書きする
+    /* markdown setting */
+    "[markdown]": {
+        "editor.formatOnSave": false,
+        "files.trimTrailingWhitespace": false // Markdownのファイルは行末の空白をトリミングしない
+    },
+    /* javascript setting */
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッタをprettierに指定
+        "editor.formatOnSave": true, // ファイル保存時にPrettierでフォーマット
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true // ファイル保存時にESLintでフォーマット
+        }
+    },
     "javascript.updateImportsOnFileMove.enabled": "always",
+    /* typescript setting */
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッタをprettierに指定
+        "editor.formatOnSave": true, // ファイル保存時にPrettierでフォーマット
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true // ファイル保存時にESLintでフォーマット
+        }
+    },
     "typescript.updateImportsOnFileMove.enabled": "always",
-    // python setting
+    /* python setting */
     "[python]": {
         "editor.tabSize": 4,
+        "editor.formatOnSave": true // 保存時自動フォーマット
     },
     "python.jediEnabled": false,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": [
-        "--max-line-length=150"
+        "--ignore=E501,W503"
     ],
-    "python.formatting.provider": "autopep8",
-    "rust.mode": "rls",
+    "python.formatting.provider": "black",
     "python.languageServer": "Microsoft",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "liveshare.featureSet": "insiders",
+    /* rust setting */
+    "rust.mode": "rls",
 }
