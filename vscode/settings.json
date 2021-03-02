@@ -2,6 +2,7 @@
     /* window setting */
     "window.zoomLevel": 0, // 画面全体の表示サイズs
     /* editor setting */
+    "editor.formatOnSave": true, // ファイル保存時にフォーマット
     "edtior.fontFamily": "HackGenNerd, Menlo, Monaco, 'Courier New', monospace",
     "editor.renderWhitespace": "all", // ホワイトスペース（半角スペース等）の表示
     "editor.renderControlCharacters": true, // 制御文字表示
@@ -26,7 +27,6 @@
     "workbench.startupEditor": "none", // Welcome Page を表示しない
     "workbench.iconTheme": "material-icon-theme",
     "workbench.editor.enablePreviewFromQuickOpen": false, // Quick Openで開いたファイルはプレビューにしない
-    "workbench.editor.enablePreview": false, // プレビューからファイルを常に通常のエディタに開くようにする
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue", // 拡張機能のサジェストで上書きする
     /* markdown setting */
     "[markdown]": {
@@ -36,7 +36,6 @@
     /* javascript setting */
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッタをprettierに指定
-        "editor.formatOnSave": true, // ファイル保存時にPrettierでフォーマット
         "editor.codeActionsOnSave": {
             "source.fixAll.eslint": true // ファイル保存時にESLintでフォーマット
         }
@@ -45,7 +44,6 @@
     /* typescript setting */
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッタをprettierに指定
-        "editor.formatOnSave": true, // ファイル保存時にPrettierでフォーマット
         "editor.codeActionsOnSave": {
             "source.fixAll.eslint": true // ファイル保存時にESLintでフォーマット
         }
@@ -54,7 +52,6 @@
     /* python setting */
     "[python]": {
         "editor.tabSize": 4,
-        "editor.formatOnSave": true // 保存時自動フォーマット
     },
     "python.jediEnabled": false,
     "python.linting.pylintEnabled": false,
@@ -64,6 +61,4 @@
     ],
     "python.formatting.provider": "black",
     "python.languageServer": "Microsoft",
-    /* rust setting */
-    "rust.mode": "rls",
 }

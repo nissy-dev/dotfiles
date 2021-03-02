@@ -19,7 +19,7 @@ defaults write com.apple.menuextra.clock "DateFormat" "EEE MMM d HH:mm"
 
 # キー入力速度を速くする
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # 保存ダイアログを詳細設定で表示
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
