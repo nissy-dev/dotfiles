@@ -1,0 +1,10 @@
+{
+	"Counter": {
+    "prefix": ["counter"],
+    "body": [
+      "from collections import Counter",
+      "c = Counter($2)",
+      "$0"
+    ]
+  }
+}

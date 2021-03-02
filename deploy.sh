@@ -24,6 +24,8 @@ if [ "$(uname)" = 'Darwin' ]; then
   if [ -d ~/Library/Application\ Support/Code/User ]; then
     ln -sfnv $SCRIPT_DIR/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
     ln -sfnv $SCRIPT_DIR/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+    rm -rf ~/Library/Application\ Support/Code/User/snippets
+    ln -sfnv $SCRIPT_DIR/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
   fi
 else
   # for linux
@@ -31,5 +33,7 @@ else
   if [ -d ~/.config/Code/User ]; then
     ln -sfnv $SCRIPT_DIR/vscode/settings.json ~/.config/Code/User/settings.json
     ln -sfnv $SCRIPT_DIR/vscode/keybindings.json ~/.config/Code/User/keybindings.json
+    rm -rf ~/.config/Code/User/snippets
+    ln -sfnv $SCRIPT_DIR/vscode/snippets ~/.config/Code/User/snippets
   fi
 fi

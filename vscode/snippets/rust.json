@@ -1,0 +1,11 @@
+
+{
+  "ForArray": {
+    "prefix": ["forarray"],
+    "body": [
+      "for (i, &item) in arr.iter().enumerate() {",
+      "\tprintln!(\"the value is: {}\", &item);",
+      "}"
+    ]
+  }
+}
