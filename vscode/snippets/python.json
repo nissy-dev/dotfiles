@@ -1,5 +1,5 @@
 {
-	"Counter": {
+  "Counter": {
     "prefix": ["counter"],
     "body": [
       "from collections import Counter",
