@@ -1,16 +1,15 @@
 {
     /* window setting */
-    "window.zoomLevel": 0, // 画面全体の表示サイズs
+    "window.zoomLevel": 0, // 画面全体の表示サイズ
     /* editor setting */
     "editor.formatOnSave": true, // ファイル保存時にフォーマット
     "edtior.fontFamily": "HackGenNerd, Menlo, Monaco, 'Courier New', monospace",
+    "editor.minimap.enabled": false, // ミニマップを非表示
     "editor.renderWhitespace": "all", // ホワイトスペース（半角スペース等）の表示
     "editor.renderControlCharacters": true, // 制御文字表示
     "editor.renderIndentGuides": true, // 現在行をガターを含めてハイライト
-    "editor.tabSize": 2,
     "editor.suggestSelection": "first", // サジェストの表示方法
-    "editor.minimap.enabled": false,  // ミニマップを非表示
-    "diffEditor.renderSideBySide": false, // 差分を横に並べて表示ではなく行内に表示
+    "editor.tabSize": 2,
     /* files setting */
     "files.trimTrailingWhitespace": true, // 余分なホワイトスペースを削除
     "files.insertFinalNewline": true, // ファイルの末尾は改行で終わらせる
@@ -24,6 +23,7 @@
         "**/node_modules/**": true
     },
     /* other setting */
+    "diffEditor.renderSideBySide": false, // 差分を横に並べて表示ではなく行内に表示
     "workbench.startupEditor": "none", // Welcome Page を表示しない
     "workbench.iconTheme": "material-icon-theme",
     "workbench.editor.enablePreviewFromQuickOpen": false, // Quick Openで開いたファイルはプレビューにしない
