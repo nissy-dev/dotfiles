@@ -5,7 +5,7 @@
 ## 環境構築
 
 ```sh
-$ git clone https://github.com/nd-02110114/dotfiles.git
+$ git clone https://github.com/nissy-dev/dotfiles.git
 $ cd dotfiles
 
 # Homebrew経由で諸々インストール 
