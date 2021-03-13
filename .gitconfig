@@ -29,15 +29,20 @@
   default = current
 
 [alias]
-  br = branch
+  al = !git config --get-regexp alias |  sed 's/^alias.//g' | sed 's/ / = /1'
+  br = branch -a -vv
   ck = checkout
   co = commit
   cp = cherry-pick
+  empty = commit --allow-empty
   pl = pull
+  pr = !gh pr list --web
   ps = push
+  psf = push --force-with-lease
   mr = merge
-  st = status
-  ss = stash
+  save = stash save -u
+  see = !gh repo view --web
+  st = status -sb
 
 [diff]
   # https://ishiotks.hatenablog.com/entry/2019/11/07/125615
