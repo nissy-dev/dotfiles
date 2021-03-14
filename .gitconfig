@@ -42,7 +42,7 @@
   mr = merge
   save = stash save -u
   see = !gh repo view --web
-  st = status -sb
+  st = status
 
 [diff]
   # https://ishiotks.hatenablog.com/entry/2019/11/07/125615
