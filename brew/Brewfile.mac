@@ -24,11 +24,9 @@ brew "pstree"
 brew "starship"
 brew "tmux"
 brew "tree"
-brew "watchman"
 brew "wget"
 
 cask "alfred"
-# cask "android-studio"
 cask "cheatsheet"
 cask "docker"
 cask "google-chrome"
@@ -44,3 +42,9 @@ cask "zoomus"
 mas "LINE", id: 539883307
 mas "Amphetamine", id: 937984704
 # mas "Magnet", id: 441258766
+
+# For React Native
+# brew "watchman"
+# cask "adoptopenjdk/openjdk/adoptopenjdk8"
+# cask "xcode"
+# cask "android-studio"
