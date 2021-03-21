@@ -9,26 +9,7 @@ fi
 
 ## 各言語の設定
 if command -v asdf 1>/dev/null 2>&1; then
-  # asdfで管理 (自分のPC用)
   . $(brew --prefix asdf)/asdf.sh
-else
-  # asdfがなければ各ツールを自分で管理 (共有の計算サーバーとか)
-
-  ## pyenv (python)
-  export PYENV_ROOT=$HOME/.pyenv
-  if [ -d "$PYENV_ROOT" ]; then
-    export PATH=$PYENV_ROOT/bin:$PATH
-    if command -v pyenv 1>/dev/null 2>&1; then
-      eval "$(pyenv init -)"
-    fi
-  fi
-
-  ## nvm (nodejs)
-  export NVM_DIR=$HOME/.nvm
-  if [ -s "$NVM_DIR/nvm.sh" ]; then
-    . $NVM_DIR/nvm.sh
-  fi
-
 fi
 
 ## android studio
@@ -96,6 +77,19 @@ alias df='df -h'
 alias grep='grep --color'
 alias virc='vi ~/.zshrc'
 alias uprc='source ~/.zshrc'
+
+# Rust製コマンド
+if command -v lsd 1>/dev/null 2>&1; then
+  alias ls='lsd'
+fi
+
+if command -v bat 1>/dev/null 2>&1; then
+  alias cat='bat'
+fi
+
+if command -v fd 1>/dev/null 2>&1; then
+  alias find='fd'
+fi
 
 ##################################
 # docker 関連のエイリアス

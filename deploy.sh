@@ -11,8 +11,6 @@ if [ -d ~/.config ]; then
 fi
 
 ln -sfnv $SCRIPT_DIR/.vim ~/.vim
-# ln -sfnv $SCRIPT_DIR/.bashrc ~/.bashrc
-# ln -sfnv $SCRIPT_DIR/.bash_profile ~/.bash_profile
 ln -sfnv $SCRIPT_DIR/.gitconfig ~/.gitconfig
 ln -sfnv $SCRIPT_DIR/.gitignore_global ~/.gitignore_global
 ln -sfnv $SCRIPT_DIR/.vimrc ~/.vimrc

@@ -7,13 +7,17 @@ set -ueo pipefail
 SCRIPT_DIR=$(cd $(dirname $0) && pwd)
 
 # Install homebrew
-echo 'Install homebrew.'
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if command -v brew 1>/dev/null 2>&1; then
+  echo 'You have already installed homebrew.'
+else
+  echo 'Install homebrew.'
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 echo 'Install packages.'
 if [ "$(uname)" = 'Darwin' ]; then
-  brew bundle --file $SCRIPT_DIR/Brewfile.mac
+  brew bundle --file $SCRIPT_DIR/Brewfile.mac -v
 else
   . $SCRIPT_DIR/linuxbrew_init.sh
-  brew bundle --file $SCRIPT_DIR/Brewfile.linux
+  brew bundle --file $SCRIPT_DIR/Brewfile.linux -v
 fi

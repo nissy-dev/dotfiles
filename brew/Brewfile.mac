@@ -2,27 +2,32 @@ cask_args appdir: "/Applications"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-tap "homebrew/services"
 
 brew "asdf"
 # brew "awscli" // Failed to brew link
+brew "bat"
 brew "coreutils"
 brew "curl"
+brew "fd"
 brew "fzf"
 brew "ghq"
 brew "git"
+brew "git-delta"
 brew "git-lfs"
 brew "gpg"
 brew "grep"
 brew "htop"
 brew "gh"
 brew "jq"
+brew "lsd"
 brew "mas"
+brew "navi"
 brew "pandoc"
-brew "postgresql", restart_service: true
 brew "pstree"
+brew "rga"
 brew "starship"
 brew "tmux"
+brew "tokei"
 brew "tree"
 brew "wget"
 
@@ -39,8 +44,8 @@ cask "slack"
 cask "visual-studio-code"
 cask "zoomus"
 
-mas "LINE", id: 539883307
-mas "Amphetamine", id: 937984704
+# mas "LINE", id: 539883307
+# mas "Amphetamine", id: 937984704
 # mas "Magnet", id: 441258766
 
 # For React Native
