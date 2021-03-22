@@ -42,7 +42,7 @@ cask "kap"
 cask "skitch"
 cask "slack"
 cask "visual-studio-code"
-cask "zoomus"
+cask "zoom"
 
 # mas "LINE", id: 539883307
 # mas "Amphetamine", id: 937984704
