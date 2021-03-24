@@ -39,17 +39,20 @@ cask "google-cloud-sdk"
 cask "google-japanese-ime"
 cask "iterm2"
 cask "kap"
+cask "kindle"
 cask "skitch"
 cask "slack"
 cask "visual-studio-code"
 cask "zoom"
 
-# mas "LINE", id: 539883307
 # mas "Amphetamine", id: 937984704
+# mas "GoodNotes", id: 1444383602
+# mas "LINE", id: 539883307
 # mas "Magnet", id: 441258766
 
 # For React Native
 # brew "watchman"
 # cask "adoptopenjdk/openjdk/adoptopenjdk8"
-# cask "xcode"
 # cask "android-studio"
+# mas "Xcode", id: 497799835
+
