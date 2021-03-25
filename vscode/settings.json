@@ -1,7 +1,4 @@
 {
-    /* window setting */
-    "window.zoomLevel": 0, // 画面全体の表示サイズ
-    /* editor setting */
     "editor.formatOnSave": true, // ファイル保存時にフォーマット
     "edtior.fontFamily": "HackGenNerd, Menlo, Monaco, 'Courier New', monospace",
     "editor.minimap.enabled": false, // ミニマップを非表示
