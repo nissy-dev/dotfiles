@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>Default Bookmark Guid</key>
 	<string>E1CF2910-1B0E-41D5-A225-0EC7D38E9C15</string>
 	<key>HapticFeedbackForEsc</key>
@@ -26,7 +28,7 @@
 			<key>AWDS Window Option</key>
 			<string>No</string>
 			<key>Ambiguous Double Width</key>
-			<true/>
+			<false/>
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -698,7 +700,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>HackGen35Nerd-Regular 13</string>
+			<string>HackGen35NerdConsole-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -754,7 +756,7 @@
 			<key>Transparency</key>
 			<real>0.24771771890862943</real>
 			<key>Unicode Version</key>
-			<integer>8</integer>
+			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
