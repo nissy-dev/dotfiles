@@ -2,9 +2,13 @@
 # PATHの追加やツールのセットアップ
 ##################################
 
-## Linuxbrew
-if [ -f ~/linuxbrew_init.sh ]; then
+## Homebrew
+if [ "$(uname)" = 'Darwin' ]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+else
+  if [ -f ~/linuxbrew_init.sh ]; then
   . ~/linuxbrew_init.sh
+  fi
 fi
 
 ## 各言語の設定
