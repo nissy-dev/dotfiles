@@ -117,6 +117,7 @@ $ make asdf
 - General > Preferences
   - Load preferences from a custom folder or URL にチェック
   - パスも設定する
+  - OSを再起動すると読み込まれる (なかなか反映されなかった)
 
 ### Commitzenの設定
 
