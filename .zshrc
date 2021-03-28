@@ -7,7 +7,7 @@ if [ "$(uname)" = 'Darwin' ]; then
   eval $(/opt/homebrew/bin/brew shellenv)
 else
   if [ -f ~/linuxbrew_init.sh ]; then
-  . ~/linuxbrew_init.sh
+    . ~/linuxbrew_init.sh
   fi
 fi
 

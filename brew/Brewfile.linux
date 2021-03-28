@@ -1,17 +1,13 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 
-brew "asdf"
 brew "bat"
-brew "coreutils"
-brew "curl"
 brew "fd"
 brew "fzf"
+brew "fontconfig"
 brew "ghq"
-brew "git"
 brew "git-delta"
 brew "git-lfs"
-brew "gpg"
 brew "grep"
 brew "htop"
 brew "gh"
@@ -26,7 +22,14 @@ brew "tokei"
 brew "tree"
 brew "wget"
 
-# for pyenv
+# for asdf
+brew "coreutils"
+brew "curl"
+brew "git"
+brew "asdf"
+# nodejs
+brew "gpg"
+# pyenv
 brew "bzip2"
 brew "libffi"
 brew "libxml2"

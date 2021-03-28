@@ -40,9 +40,9 @@ $ chmod 600 ~/.ssh/config
 `.ssh/config`には以下の内容を書き込む。
 ```
 Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_ed25519
 ```
 
 接続の確認。
@@ -62,24 +62,30 @@ $ git clone git@github.com:nissy-dev/dotfiles.git .
 $ make brew
 ```
 
-### dotfilesのセットアップ
+2020/03/28の時点でうまくいかなかったパッケージ
+
+- `google-japanese-ime`
+  - Rosseta 2 のインストールが必要
+- `Docker`
+  - M1 Preview版は手動でのインストールが必要
+  - https://docs.docker.com/docker-for-mac/apple-m1/
+
+### dotfilesの設定
 
 ```sh
 $ make dotfiles
 $ source ~/.zshrc
 ```
 
-### Macのセットアップ
+### Mac関連の設定
 
-再起動が必要になることもある。
+再起動をすると全ての設定が反映される。
 
 ```sh
 $ make mac
 ```
 
-メモ：2020/03/28の時点では、`google-japanese-ime`のインストールが上手く行かなかった。
-
-### フォントのセットアップ
+### フォントの設定
 
 [「白源」](https://github.com/yuru7/HackGen)をインストール。
 
@@ -87,43 +93,34 @@ $ make mac
 $ make font
 ```
 
-### 各言語のインストール
+### 各言語の初期設定
 
-Go、Rust, Python, Node.jsの最新バージョンをインストール。
+Go、Rust、Python、Node.jsをインストール。
 
 ```sh
 $ make asdf
 ```
 
-### VSCodeのセットアップ
+メモ：2020/03/28の時点では、M1対応のPython3.8系やNode.jsのバイナリが公開されていない。
 
-拡張機能をインストール。
+### VSCodeの設定
 
-```sh
-$ make code
-```
+- Codeコマンドをインストール
+  - Command + P で `> code`と打ち込むと出てくる
+- 拡張機能をインストール
+  - `make code`でインストールできる
 
-### iTermのセットアップ
+### iTermの設定
 
-設定画面で、`com.googlecode.iterm2.plist`を読み込む。
+`com.googlecode.iterm2.plist`を読み込む。
 
 - General > Preferences
   - Load preferences from a custom folder or URL にチェック
   - パスも設定する
 
-### Commitzenのセットアップ
+### Commitzenの設定
 
 ```sh
-$ asdf global nodejs x.x.x
 $ npm install -g commitizen cz-conventional-changelog
 $ asdf reshim nodejs
-```
-
-### AwsCLIのセットアップ
-
-AWS CLIは、インストールが複雑なので[公式の手順](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html#cliv2-mac-install-cmd)どおりにインストールしたほうが安全。
-
-
-```sh
-$ 
 ```

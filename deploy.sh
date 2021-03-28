@@ -19,6 +19,7 @@ ln -sfnv $SCRIPT_DIR/.npm-init.js ~/.npm-init.js
 ln -sfnv $SCRIPT_DIR/starship.toml ~/.config/starship.toml
 ln -sfnv $SCRIPT_DIR/.tmux.conf ~/.tmux.conf
 ln -sfnv $SCRIPT_DIR/.czrc ~/.czrc
+ln -sfnv $SCRIPT_DIR/asdf/.tool-versions ~/.tool-versions
 
 if [ "$(uname)" = 'Darwin' ]; then
   # for mac

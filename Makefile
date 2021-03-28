@@ -14,11 +14,8 @@ dotfiles:
 
 .PHONY: asdf
 asdf:
-	echo 'Install plugins.'
-	@$(foreach lang, $(INSTALL_LANG), asdf plugin add $(lang);)
-	bash -c '$(ASDF_DATA_DIR)/plugins/nodejs/bin/import-release-team-keyring'
-	echo 'Install latest stable version.'
-	@$(foreach lang, $(INSTALL_LANG), asdf install $(lang) latest;)
+	echo 'Install languages by asdf.'
+	$(DOTFILES_DIR)/asdf/install_lang.sh
 
 .PHONY: mac
 mac:

@@ -3,24 +3,18 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 
-brew "asdf"
 brew "bat"
-brew "coreutils"
-brew "curl"
 brew "fd"
 brew "fzf"
 brew "fontconfig"
 brew "ghq"
-brew "git"
 brew "git-delta"
 brew "git-lfs"
-brew "gpg"
 brew "grep"
 brew "htop"
 brew "gh"
 brew "jq"
 brew "lsd"
-brew "mas"
 brew "navi"
 brew "pstree"
 brew "ripgrep"
@@ -29,6 +23,20 @@ brew "tmux"
 brew "tokei"
 brew "tree"
 brew "wget"
+
+# for asdf
+brew "coreutils"
+brew "curl"
+brew "git"
+brew "asdf"
+# nodejs
+brew "gpg"
+# pyenv
+brew "openssl"
+brew "readline"
+brew "sqlite3"
+brew "xz"
+brew "zlib"
 
 cask "alfred"
 cask "cheatsheet"
@@ -44,12 +52,14 @@ cask "slack"
 cask "visual-studio-code"
 cask "zoom"
 
+# for App
+# brew "mas"
 # mas "Amphetamine", id: 937984704
 # mas "GoodNotes", id: 1444383602
 # mas "LINE", id: 539883307
 # mas "Magnet", id: 441258766
 
-# For React Native
+# for React Native
 # brew "watchman"
 # cask "adoptopenjdk/openjdk/adoptopenjdk8"
 # cask "android-studio"
