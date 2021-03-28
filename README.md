@@ -21,8 +21,6 @@
 
 ### ssh の設定
 
-[Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)に全部手順が書いてある。
-
 鍵の生成と[GitHub SSH keys](https://github.com/settings/keys)への公開鍵の登録。
 
 ```sh
@@ -52,6 +50,8 @@ $ eval "$(ssh-agent -s)"
 $ ssh-add ~/.ssh/id_ed25519
 $ ssh -T git@github.com
 ```
+
+詳細は[Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)を確認すると良い。
 
 ### Homebrewでツールのインストール
 
@@ -101,14 +101,14 @@ Go、Rust、Python、Node.jsをインストール。
 $ make asdf
 ```
 
+パッケージマネージャーも必要があれば最新にしておく。
+
+```sh
+$ npm install -g npm@latest
+$ python -m pip install --upgrade pip
+```
+
 メモ：2020/03/28の時点では、M1対応のPython3.8系やNode.jsのバイナリが公開されていない。
-
-### VSCodeの設定
-
-- Codeコマンドをインストール
-  - Command + P で `> code`と打ち込むと出てくる
-- 拡張機能をインストール
-  - `make code`でインストールできる
 
 ### iTermの設定
 
@@ -118,6 +118,13 @@ $ make asdf
   - Load preferences from a custom folder or URL にチェック
   - パスも設定する
   - OSを再起動すると読み込まれる (なかなか反映されなかった)
+
+### VSCodeの設定
+
+- Codeコマンドをインストール
+  - Command + P で `> code`と打ち込むと出てくる
+- 拡張機能をインストール
+  - `make code`でインストールできる
 
 ### Commitzenの設定
 

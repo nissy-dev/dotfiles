@@ -27,12 +27,3 @@ do
 
   asdf global ${array[0]} ${array[1]}
 done
-
-# use the latest pkg manager
-if command -v npm 1>/dev/null 2>&1; then
-  npm install -g npm@latest
-fi
-
-if command -v pip 1>/dev/null 2>&1; then
-  python -m pip install --upgrade pip
-fi
