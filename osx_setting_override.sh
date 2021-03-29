@@ -8,9 +8,6 @@ set -ueo pipefail
 # 基本設定
 ##################################
 
-# バッテリーのパーセントを非表示にする
-defaults write com.apple.menuextra.battery ShowPercent -string "YES"
-
 # 未確認のアプリケーションを実行する際のダイアログを無効にする
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
@@ -26,6 +23,17 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 # 印刷ダイアログを詳細表示で表示
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+
+# メニュバー系はあまりうまく動かないので注意...
+# Dockとメニューバー -> バッテリー -> 割合（%）を表示
+# バッテリーのパーセント表示
+defaults write com.apple.controlcenter BatteryShowPercentage 1
+
+# 音量アイコンをMenuBarに表示
+defaults write com.apple.controlcenter "NSStatusItem Visible Sound" 0
+
+# BLEアイコンをMenuBarに表示
+defaults write com.apple.controlcenter "NSStatusItem Visible Bluetooth" 0
 
 # 設定を反映
 killall SystemUIServer
