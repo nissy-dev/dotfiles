@@ -1,6 +1,7 @@
 {
     "editor.formatOnSave": true, // ファイル保存時にフォーマット
-    "edtior.fontFamily": "HackGenNerd, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'HackGen35Nerd Console', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
     "editor.minimap.enabled": false, // ミニマップを非表示
     "editor.renderWhitespace": "all", // ホワイトスペース（半角スペース等）の表示
     "editor.renderControlCharacters": true, // 制御文字表示
@@ -24,6 +25,10 @@
         "editor.formatOnSave": false,
         "files.trimTrailingWhitespace": false // Markdownのファイルは行末の空白をトリミングしない
     },
+    /* json setting */
+    "[json]": {
+        "editor.tabSize": 4,
+    },
     /* javascript setting */
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッタをprettierに指定
@@ -31,20 +36,32 @@
             "source.fixAll.eslint": true // ファイル保存時にESLintでフォーマット
         }
     },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        }
+    },
     "javascript.updateImportsOnFileMove.enabled": "always",
     /* typescript setting */
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッタをprettierに指定
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": true // ファイル保存時にESLintでフォーマット
+            "source.fixAll.eslint": true
         }
     },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        }
+    },
+    "typescript.locale": "en", // エラーメッセージを英語にする
     "typescript.updateImportsOnFileMove.enabled": "always",
     /* python setting */
     "[python]": {
         "editor.tabSize": 4,
     },
-    "python.jediEnabled": false,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": [
