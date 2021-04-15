@@ -2,3 +2,5 @@ nodejs 15.12.0
 python miniconda3-latest
 rust 1.51.0
 golang 1.16.2
+gcloud latest
+awscli latest

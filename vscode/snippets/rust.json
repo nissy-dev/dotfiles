@@ -1,5 +1,20 @@
 
 {
+  "AtcoderInit": {
+    "prefix": ["ac-init"],
+    "body": [
+      "use proconio::{fastout, input};",
+      "",
+      "#[fastout]",
+      "fn main() {",
+      "\tinput! {",
+      "\t\ts: String,",
+      "\t\tn: usize,",
+      "\t\ta: [usize; n]",
+      "\t}",
+      "}"
+    ]
+  },
   "ForArray": {
     "prefix": ["forarray"],
     "body": [

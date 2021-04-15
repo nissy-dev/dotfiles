@@ -4,20 +4,22 @@
 
 ## 環境構築手順
 
-### ソフトウェア・アップデート
+### 諸々の設定
 
-- (appleマーク) > このmacについて > ソフトウェアアップデート
-- (appleマーク) > App Store > すべてアップデート
-  - `make brew`する前に、Apple Storeにログインしておく
+キーボードはUS配列の場合
 
-
-### キーボードの設定 (US配列の場合)
-
-- (appleマーク) > キーボード > ショートカット
+- このMacについて > ソフトウェアアップデート
+- App Store > すべてアップデート
+  - Apple Storeにログインしておく
+- システム環境設定 > キーボード > ショートカット
   - 入力ソース > 前の入力ソースを選択 のショートカットを `command + space` に
   - Spotlight > Spotlight検索を表示 のショートカットを `control + space` に
-- (appleマーク) > キーボード > キーボード > 修飾キー
-  - Caps LockとControlを入れ替える 
+- システム環境設定 > キーボード > キーボード > 修飾キー
+  - Caps LockとControlを入れ替える
+- システム環境設定 > ディスプレイ > ディスプレイ
+  - 「輝度を自動調整」をOFF
+- システム環境設定 > サウンド > サウンドエフェクト
+  - 「起動時にサウンドを再生」をOFF
 
 ### ssh の設定
 
@@ -117,7 +119,7 @@ $ python -m pip install --upgrade pip
 - General > Preferences
   - Load preferences from a custom folder or URL にチェック
   - パスも設定する
-  - OSを再起動すると読み込まれる (なかなか反映されなかった)
+  - OSを再起動すると読み込まれる
 
 ### VSCodeの設定
 

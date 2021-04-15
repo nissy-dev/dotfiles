@@ -15,8 +15,6 @@
         ".*lintrc": "json",
         "*.flow": "javascript"
     },
-    /* other setting */
-    "window.zoomLevel": 1,
     "workbench.startupEditor": "none", // Welcome Page を表示しない
     "workbench.iconTheme": "material-icon-theme",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue", // 拡張機能のサジェストで上書きする
@@ -69,4 +67,5 @@
     ],
     "python.formatting.provider": "black",
     "python.languageServer": "Microsoft",
+    "window.zoomLevel": 1,
 }
