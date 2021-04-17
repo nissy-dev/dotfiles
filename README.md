@@ -112,6 +112,13 @@ $ python -m pip install --upgrade pip
 
 メモ：2020/03/28の時点では、M1対応のPython3.8系やNode.jsのバイナリが公開されていない。
 
+また必要であれば、GCloud CLI / AWS CLIのインストールもできる
+
+```sh
+$ asdf plugin add gcloud && asdf install gcloud latest
+$ asdf plugin add awscli && asdf install awscli latest
+```
+
 ### iTermの設定
 
 `com.googlecode.iterm2.plist`を読み込む。
