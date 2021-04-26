@@ -4,7 +4,9 @@
 
 ## Homebrew
 if [ "$(uname)" = 'Darwin' ]; then
-  eval $(/opt/homebrew/bin/brew shellenv)
+  if [ -f /opt/homebrew/bin/brew ]; then
+    eval $(/opt/homebrew/bin/brew shellenv)
+  fi
 else
   if [ -f ~/linuxbrew_init.sh ]; then
     . ~/linuxbrew_init.sh
@@ -178,6 +180,9 @@ fcd() {
 kill-by-port() {
   lsof -P | grep $1 | awk '{print $2}' | xargs kill -9
 }
+
+# conda有効化
+alias conda-init='eval "$(conda shell.zsh hook)"'
 
 ##################################
 # 独自設定の読み込み
