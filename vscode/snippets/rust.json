@@ -9,8 +9,10 @@
       "fn main() {",
       "\tinput! {",
       "\t\ts: String,",
-      "\t\tn: usize,",
-      "\t\ta: [usize; n]",
+      "\t\tt: usize,",
+      "\t\t(n, m): (usize, usize),",
+      "\t\ta: [usize; n],",
+      "\t\tdata: [[usize; m]; n]",
       "\t}",
       "}"
     ]

@@ -135,9 +135,11 @@ $ asdf plugin add awscli && asdf install awscli latest
 - 拡張機能をインストール
   - `make code`でインストールできる
 
-### Commitzenの設定
+### グローバルに入れるツールの設定
 
 ```sh
-$ npm install -g commitizen cz-conventional-changelog
+$ npm install -g commitizen cz-conventional-changelog prettier
 $ asdf reshim nodejs
+$ pip install flake8 black
+$ asdf reshim python
 ```
