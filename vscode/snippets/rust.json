@@ -1,6 +1,6 @@
 
 {
-  "AtcoderInit": {
+  "atcoder init": {
     "prefix": ["ac-init"],
     "body": [
       "use proconio::{fastout, input};",
@@ -8,20 +8,13 @@
       "#[fastout]",
       "fn main() {",
       "\tinput! {",
-      "\t\ts: String,",
-      "\t\tt: usize,",
-      "\t\t(n, m): (usize, usize),",
-      "\t\ta: [usize; n],",
-      "\t\tdata: [[usize; m]; n]",
+      "\t\t// s: String,",
+      "\t\t// n: usize,",
+      "\t\t// (n, m): (usize, usize),",
+      "\t\t// (a, b, c): (usize, usize, usize),",
+      "\t\t// data: [usize; n],",
+      "\t\t// data: [[usize; m]; n]",
       "\t}",
-      "}"
-    ]
-  },
-  "ForArray": {
-    "prefix": ["forarray"],
-    "body": [
-      "for (i, &item) in arr.iter().enumerate() {",
-      "\tprintln!(\"the value is: {}\", &item);",
       "}"
     ]
   }

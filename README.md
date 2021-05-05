@@ -23,7 +23,7 @@
 
 ### ssh の設定
 
-鍵の生成と[GitHub SSH keys](https://github.com/settings/keys)への公開鍵の登録。
+鍵の生成と[GitHub SSH keys](https://github.com/settings/keys)への公開鍵の登録
 
 ```sh
 $ ssh-keygen -t ed25519 -C "nd.12021218@gmail.com"
@@ -37,7 +37,8 @@ $ vi ~/.ssh/config
 $ chmod 600 ~/.ssh/config
 ```
 
-`.ssh/config`には以下の内容を書き込む。
+`.ssh/config`には以下の内容を書き込む
+
 ```
 Host *
     AddKeysToAgent yes
@@ -45,7 +46,7 @@ Host *
     IdentityFile ~/.ssh/id_ed25519
 ```
 
-接続の確認。
+接続の確認
 
 ```sh
 $ eval "$(ssh-agent -s)"
@@ -81,7 +82,7 @@ $ source ~/.zshrc
 
 ### Mac関連の設定
 
-再起動をすると全ての設定が反映される。
+再起動をすると全ての設定が反映される
 
 ```sh
 $ make mac
@@ -95,22 +96,15 @@ $ make mac
 $ make font
 ```
 
-### 各言語の初期設定
+### 各言語のインストール
 
-Go、Rust、Python、Node.jsをインストール。
+Go、Rust、Python、Node.jsをインストール
 
 ```sh
 $ make asdf
 ```
 
-パッケージマネージャーも必要があれば最新にしておく。
-
-```sh
-$ npm install -g npm@latest
-$ python -m pip install --upgrade pip
-```
-
-メモ：2020/03/28の時点では、M1対応のPython3.8系やNode.jsのバイナリが公開されていない。
+メモ：2020/03/28の時点では、M1対応のPython3.8系やNode.jsのバイナリが公開されていない
 
 また必要であれば、GCloud CLI / AWS CLIのインストールもできる
 
@@ -121,7 +115,7 @@ $ asdf plugin add awscli && asdf install awscli latest
 
 ### iTermの設定
 
-`com.googlecode.iterm2.plist`を読み込む。
+`com.googlecode.iterm2.plist`を読み込む
 
 - General > Preferences
   - Load preferences from a custom folder or URL にチェック
@@ -135,11 +129,19 @@ $ asdf plugin add awscli && asdf install awscli latest
 - 拡張機能をインストール
   - `make code`でインストールできる
 
-### グローバルに入れるツールの設定
+### その他の設定
+
+パッケージマネージャーも必要があれば最新にしておく
 
 ```sh
+$ npm install -g npm@latest
 $ npm install -g commitizen cz-conventional-changelog prettier
 $ asdf reshim nodejs
-$ pip install flake8 black
+```
+
+```sh
+$ conda-init
+$ pip install --upgrade pip
+$ pip install flake8 black numpy pandas
 $ asdf reshim python
 ```

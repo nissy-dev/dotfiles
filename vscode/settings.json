@@ -1,4 +1,9 @@
 {
+    "window.zoomLevel": 1,
+    "workbench.startupEditor": "none", // Welcome Page を表示しない
+    "workbench.iconTheme": "material-icon-theme",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue", // 拡張機能のサジェストで上書きする
+    /* editor setting */
     "editor.formatOnSave": true, // ファイル保存時にフォーマット
     "editor.fontFamily": "'HackGen35Nerd Console', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
@@ -15,9 +20,6 @@
         ".*lintrc": "json",
         "*.flow": "javascript"
     },
-    "workbench.startupEditor": "none", // Welcome Page を表示しない
-    "workbench.iconTheme": "material-icon-theme",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue", // 拡張機能のサジェストで上書きする
     /* markdown setting */
     "[markdown]": {
         "editor.formatOnSave": false,
@@ -67,5 +69,10 @@
     ],
     "python.formatting.provider": "black",
     "python.languageServer": "Microsoft",
-    "window.zoomLevel": 1,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
 }
