@@ -9,7 +9,7 @@ SCRIPT_DIR=$(cd $(dirname $0) && pwd)
 # install extention
 cat $SCRIPT_DIR/extensions | while read line
 do
-  code --install-extension $line
+  code --install-extension $line --force
 done
 
 code --list-extensions > $SCRIPT_DIR/extensions

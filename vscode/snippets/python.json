@@ -1,4 +1,25 @@
 {
+  "accumulate": {
+    "prefix": ["accumulate", "cumsum"],
+    "body": [
+      "N = 10",
+      "cumsum = [0 for _ in range(N+1)]",
+      "for i in range(N):",
+      "\tcumsum[i+1] = cumsum[i] + data[i]"
+    ]
+  },
+  "base 10 to n": {
+    "prefix": ["10 to n", "base 10 to n"],
+    "body": [
+      "def base_10_to_n(origin_number, n):",
+      "\ttmp = origin_number",
+      "\tout = ''",
+      "\twhile tmp > 0:",
+      "\t\tout = str(tmp % n) + out",
+      "\t\ttmp = int(tmp / n)",
+      "\treturn out"
+    ]
+  },
   "bit all search": {
     "prefix": ["bit", "bit all search"],
     "body": [
@@ -41,10 +62,19 @@
     "prefix": ["counter", "cnt"],
     "body": [
       "import collections",
-      "counter = collections.Counter(n)",
       "",
+      "counter = collections.Counter(n)",
       "for key, val in counter.items():",
       "\tprint(key, val)"
+    ]
+  },
+  "least common multiple": {
+    "prefix": ["lcm"],
+    "body": [
+      "import math",
+      "",
+      "def lcm(x, y):",
+      "\treturn (x * y) // math.gcd(x, y)"
     ]
   },
   "sorted by key": {
