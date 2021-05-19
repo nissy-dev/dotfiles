@@ -4,6 +4,7 @@
     "prefix": ["ac-init"],
     "body": [
       "use proconio::{fastout, input};",
+      "// use proconio::marker::Chars;",
       "",
       "#[fastout]",
       "fn main() {",
