@@ -36,7 +36,7 @@
   cp = cherry-pick
   empty = commit --allow-empty
   pl = pull
-  pr = !gh pr list --web
+  pr = !gh pr view --web
   ps = push
   psf = push --force-with-lease
   mr = merge

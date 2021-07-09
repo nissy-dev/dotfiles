@@ -51,6 +51,12 @@ if [ -f ~/.fzf.zsh ]; then
   . ~/.fzf.zsh
 fi
 
+## load completions
+if [ -e ~/.zsh/completions ]; then
+  fpath=(~/.zsh/completions $fpath)
+  autoload -Uz compinit && compinit -i
+fi
+
 ##################################
 # シェル全般の設定
 ##################################
@@ -102,12 +108,13 @@ fi
 ##################################
 
 alias d='docker'
-alias dc='docker-compose'
+alias dc='docker compose'
 alias dimg='docker images'
 alias dimg-clean='docker system prune'
 alias dcnt='docker ps -a'
 alias dcnt-clean='docker rm $(docker ps -aq)'
 alias drun='docker run --rm -it'
+alias kb='kubectl'
 
 ##################################
 # git 関連のエイリアス
@@ -171,7 +178,7 @@ fh() {
 # fd - cd to selected directory
 fcd() {
   local dir
-  dir=$(find ${1:-.} -path '*/\.*' -prune \
+  dir=$(/usr/bin/find ${1:-.} -path '*/\.*' -prune \
                   -o -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
 }
