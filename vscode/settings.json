@@ -57,6 +57,7 @@
         }
     },
     "typescript.locale": "en", // エラーメッセージを英語にする
+    "typescript.tsdk": "node_modules/typescript/lib",
     "typescript.updateImportsOnFileMove.enabled": "always",
     /* python setting */
     "[python]": {
@@ -69,10 +70,7 @@
     ],
     "python.formatting.provider": "black",
     "python.languageServer": "Microsoft",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
 }
