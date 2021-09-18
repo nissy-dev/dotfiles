@@ -15,7 +15,7 @@ fi
 
 ## 各言語の設定
 if command -v asdf 1>/dev/null 2>&1; then
-  . $(brew --prefix asdf)/asdf.sh
+  . $(brew --prefix asdf)/libexec/asdf.sh
 fi
 
 ## android studio
