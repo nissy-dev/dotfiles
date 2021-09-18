@@ -1,4 +1,4 @@
-nodejs 15.12.0
+nodejs 16.9.1
 python miniconda3-latest
-rust 1.51.0
-golang 1.16.2
+rust 1.55.0
+golang 1.17.1

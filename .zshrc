@@ -14,7 +14,7 @@ else
 fi
 
 ## 各言語の設定
-if command -v asdf 1>/dev/null 2>&1; then
+if type "asdf" >/dev/null 2>&1; then
   . $(brew --prefix asdf)/libexec/asdf.sh
 fi
 
@@ -42,7 +42,7 @@ if [ -f ~/google-cloud-sdk/completion.zsh.inc ]; then
 fi
 
 ## starship
-if command -v starship 1>/dev/null 2>&1; then
+if type "starship" >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
@@ -91,15 +91,15 @@ alias virc='vi ~/.zshrc'
 alias uprc='source ~/.zshrc'
 
 # Rust製コマンド
-if command -v lsd 1>/dev/null 2>&1; then
+if type "lsd" >/dev/null 2>&1; then
   alias ls='lsd'
 fi
 
-if command -v bat 1>/dev/null 2>&1; then
+if type "bat" >/dev/null 2>&1; then
   alias cat='bat'
 fi
 
-if command -v fd 1>/dev/null 2>&1; then
+if type "fd" >/dev/null 2>&1; then
   alias find='fd'
 fi
 

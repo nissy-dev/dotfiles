@@ -12,34 +12,34 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
     steps:
-    - uses: actions/checkout@v2
-    - name: Install zsh for Linux
-      if: runner.os == 'Linux'
-      run: |
-        sudo apt-get update
-        sudo apt-get install zsh
-    - name: brew install for MacOS
-      if: runner.os == 'macOS'
-      shell: zsh {0}
-      run: |
-        sed '/^mas/d' ./brew/Brewfile.mac | sed '/^cask/d' > ./brew/Brewfile.mac.tmp
-        brew bundle --file ./brew/Brewfile.mac.tmp
-    - name: brew install for Linux
-      if: runner.os == 'Linux'
-      shell: zsh {0}
-      run: |
-        sudo apt-get update
-        sudo apt-get install build-essential curl file git
-        make brew
-    - name: setup dotfiles
-      shell: zsh {0}
-      run: make dotfiles
-    - name: check asdf
-      shell: zsh {0}
-      run: make asdf
-    - name: Override the default settings on Mac
-      if: runner.os == 'macOS'
-      run: make mac
-    - name: Install font
-      if: runner.os == 'Linux'
-      run: make font
+      - uses: actions/checkout@v2
+      - name: Install zsh for Linux
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install zsh
+      - name: brew install for MacOS
+        if: runner.os == 'macOS'
+        shell: zsh {0}
+        run: |
+          sed '/^mas/d' ./brew/Brewfile.mac | sed '/^cask/d' > ./brew/Brewfile.mac.tmp
+          brew bundle --file ./brew/Brewfile.mac.tmp
+      - name: brew install for Linux
+        if: runner.os == 'Linux'
+        shell: zsh {0}
+        run: |
+          sudo apt-get update
+          sudo apt-get install build-essential curl file git
+          make brew
+      - name: setup dotfiles
+        shell: zsh {0}
+        run: make dotfiles
+      - name: check asdf
+        shell: zsh {0}
+        run: . $(brew --prefix asdf)/libexec/asdf.sh && make asdf
+      - name: Override the default settings on Mac
+        if: runner.os == 'macOS'
+        run: make mac
+      - name: Install font
+        if: runner.os == 'Linux'
+        run: make font

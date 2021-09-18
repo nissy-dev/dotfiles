@@ -18,8 +18,8 @@ do
   fi
 
   if [ "$(uname -m)" = 'arm64' ] && \
-     ([ "${array[0]}" = 'nodejs' ] || [ "${array[0]}" = 'python' ]); then
-    # FIXME: M1かつNode.js or Pythonのインストールの時 (workaround)
+     [ "${array[0]}" = 'python' ]; then
+    # FIXME: M1かつPythonのインストールの時 (miniforge3に置き換えたい)
     arch -x86_64 asdf install ${array[0]} ${array[1]}
   else
     asdf install ${array[0]} ${array[1]}

@@ -142,6 +142,6 @@ $ asdf reshim nodejs
 ```sh
 $ conda-init
 $ pip install --upgrade pip
-$ pip install flake8 black numpy pandas
+$ pip install flake8 black numpy pandas jupyterlab
 $ asdf reshim python
 ```
