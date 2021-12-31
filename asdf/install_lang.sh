@@ -12,11 +12,6 @@ do
 
   asdf plugin add ${array[0]}
 
-  # for nodejs
-  if [ "${array[0]}" = 'nodejs' ]; then
-    bash -c "$HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
-  fi
-
   if [ "$(uname -m)" = 'arm64' ] && \
      [ "${array[0]}" = 'python' ]; then
     # FIXME: M1かつPythonのインストールの時 (miniforge3に置き換えたい)
