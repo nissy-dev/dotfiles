@@ -4,4 +4,7 @@ python miniconda3-latest
 rust latest
 golang latest
 java adoptopenjdk-17.0.1+12
+kotlin latest
 direnv latest
+protoc latest
+kubectl latest

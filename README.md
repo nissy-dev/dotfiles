@@ -65,7 +65,7 @@ $ git clone git@github.com:nissy-dev/dotfiles.git .
 $ make brew
 ```
 
-Linux の場合は、ドキュメントの [Requirements](https://docs.brew.sh/Homebrew-on-Linux#requirements) に記載されているビルドツールをインストールしておく必要がある。
+Linux の場合は、ドキュメントの [Requirements](https://docs.brew.sh/Homebrew-on-Linux#requirements) に記載されているビルドツールをインストールしておく必要がある
 
 ```bash
 sudo apt-get install build-essential procps curl file git
@@ -88,7 +88,7 @@ $ make mac
 
 ### フォントの設定
 
-[「白源」](https://github.com/yuru7/HackGen)をインストール。
+[「白源」](https://github.com/yuru7/HackGen)をインストール
 
 ```sh
 $ make font
