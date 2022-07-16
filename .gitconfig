@@ -27,6 +27,7 @@
 [push]
   # upstreamを設定していなくてもpushされる
   default = current
+  autoSetupRemote = true
 
 [alias]
   al = !git config --get-regexp alias |  sed 's/^alias.//g' | sed 's/ / = /1'

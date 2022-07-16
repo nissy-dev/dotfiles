@@ -68,9 +68,18 @@
         "--ignore=E501,W503"
     ],
     "python.formatting.provider": "black",
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Default",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    /* GitHub Copilot */
+    "editor.inlineSuggest.enabled": true,
+    /* Ignore files related to Java */
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     "window.zoomLevel": 1,
 }
