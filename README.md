@@ -65,13 +65,11 @@ $ git clone git@github.com:nissy-dev/dotfiles.git .
 $ make brew
 ```
 
-2020/03/28の時点でうまくいかなかったパッケージ
+Linux の場合は、ドキュメントの [Requirements](https://docs.brew.sh/Homebrew-on-Linux#requirements) に記載されているビルドツールをインストールしておく必要がある。
 
-- `google-japanese-ime`
-  - Rosseta 2 のインストールが必要
-- `Docker`
-  - M1 Preview版は手動でのインストールが必要
-  - https://docs.docker.com/docker-for-mac/apple-m1/
+```bash
+sudo apt-get install build-essential procps curl file git
+```
 
 ### dotfilesの設定
 
@@ -98,13 +96,11 @@ $ make font
 
 ### 各言語のインストール
 
-Go、Rust、Python、Node.jsをインストール
+[.tool-versions](https://github.com/nissy-dev/dotfiles/blob/master/asdf/.tool-versions) に記載されている各言語をインストール
 
 ```sh
 $ make asdf
 ```
-
-メモ：2020/03/28の時点では、M1対応のPython3.8系やNode.jsのバイナリが公開されていない
 
 また必要であれば、GCloud CLI / AWS CLIのインストールもできる
 

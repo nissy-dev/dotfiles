@@ -24,6 +24,7 @@ brew "tmux"
 brew "tokei"
 brew "tree"
 brew "wget"
+brew "zsh"
 
 # for asdf
 brew "asdf"

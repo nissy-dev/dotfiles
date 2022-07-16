@@ -11,14 +11,6 @@ do
   array=(`echo $line`)
 
   asdf plugin add ${array[0]}
-
-  if [ "$(uname -m)" = 'arm64' ] && \
-     [ "${array[0]}" = 'python' ]; then
-    # FIXME: M1かつPythonのインストールの時 (miniforge3に置き換えたい)
-    arch -x86_64 asdf install ${array[0]} ${array[1]}
-  else
-    asdf install ${array[0]} ${array[1]}
-  fi
-
+  asdf install ${array[0]} ${array[1]}
   asdf global ${array[0]} ${array[1]}
 done

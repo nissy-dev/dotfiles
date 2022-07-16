@@ -1,7 +1,5 @@
 # 変数の準備
 DOTFILES_DIR      := $(PWD)
-INSTALL_LANG      := nodejs python rust golang
-ASDF_DATA_DIR     := $(HOME)/.asdf
 
 .PHONY: brew
 brew:
