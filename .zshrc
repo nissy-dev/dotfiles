@@ -46,6 +46,11 @@ if type "starship" >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
+## direenv
+if type "direnv" >/dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
+
 ## fzf
 if [ -f ~/.fzf.zsh ]; then
   . ~/.fzf.zsh
