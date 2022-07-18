@@ -6,7 +6,7 @@ set -ueo pipefail
 
 SCRIPT_DIR=$(cd $(dirname $0) && pwd)
 
-cat $SCRIPT_DIR/.tool-versions | while read line
+cat $SCRIPT_DIR/versions | while read line
 do
   array=(`echo $line`)
 
