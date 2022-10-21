@@ -115,8 +115,14 @@ $ asdf plugin add awscli && asdf install awscli latest
 
 - General > Preferences
   - Load preferences from a custom folder or URL にチェック
-  - パスも設定する
+  - パスを `~/code/github.com/nissy-dev/dotfiles`、Save changes を 「Manually」に設定する
   - OSを再起動すると読み込まれる
+
+### IME のインストール
+
+Google の日本語 IME は、次のサイトからインストールできる。  
+Homebrew 経由ではうまくインストールできなかったため手動でインストールする  
+リンク: https://www.google.co.jp/ime/
 
 ### VSCodeの設定
 
