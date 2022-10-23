@@ -28,7 +28,7 @@ jobs:
         run: make dotfiles
       - name: check asdf
         run: |
-          if [ -f ~/linuxbrew_init.sh ]; then . ~/linuxbrew_init.sh fi
+          [ -f ~/linuxbrew_init.sh ] && . ~/linuxbrew_init.sh
           . $(brew --prefix asdf)/libexec/asdf.sh
           make asdf
       - name: Override the default settings on Mac
