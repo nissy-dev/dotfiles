@@ -5,7 +5,7 @@ on:
       - master
 
 jobs:
-  test:
+  make-brew-test:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -24,13 +24,27 @@ jobs:
           sudo apt-get update
           sudo apt-get install build-essential curl file git
           make brew
+
+  make-dotfiles-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v2
       - name: setup dotfiles
         run: make dotfiles
+
+  make-asdf-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
       - name: check asdf
-        run: . $(brew --prefix asdf)/libexec/asdf.sh && make asdf
-      - name: Override the default settings on Mac
-        if: runner.os == 'macOS'
-        run: make mac
-      - name: Install font
-        if: runner.os == 'Linux'
-        run: make font
+        run: brew install asdf && . $(brew --prefix asdf)/libexec/asdf.sh && make asdf

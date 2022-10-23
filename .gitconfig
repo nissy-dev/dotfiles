@@ -13,6 +13,8 @@
   # global の gitignore
   # 自分の環境依存のものを登録する
   excludesfile = ~/.gitignore_global
+  # https://github.com/dandavison/delta を使う
+  pager = delta
 
 [color]
   ui = true
@@ -51,6 +53,17 @@
 
 [grep]
   lineNumber = true
+
+# https://github.com/dandavison/delta の設定
+[interactive]
+  diffFilter = delta --color-only
+
+[add.interactive]
+  useBuiltin = false
+
+[delta]
+  line-numbers = true
+  side-by-side = true
 
 # git lfs のための設定
 [filter "lfs"]
