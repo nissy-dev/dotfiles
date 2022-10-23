@@ -5,10 +5,7 @@
 set -ueo pipefail
 
 SCRIPT_DIR=$(cd $(dirname $0) && pwd)
-
-if [ -d ~/.config ]; then
-  mkdir -p ~/.config
-fi
+mkdir -p ~/.config
 
 ln -sfnv $SCRIPT_DIR/.vim ~/.vim
 ln -sfnv $SCRIPT_DIR/.gitconfig ~/.gitconfig
@@ -24,7 +21,9 @@ ln -sfnv $SCRIPT_DIR/asdf/.asdfrc ~/.asdfrc
 if [ "$(uname)" = 'Darwin' ]; then
   # for mac
   if [ -d ~/Library/Application\ Support/Code/User ]; then
+    touch ~/Library/Application\ Support/Code/User/settings.json
     ln -sfnv $SCRIPT_DIR/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+    touch ~/Library/Application\ Support/Code/User/keybindings.json
     ln -sfnv $SCRIPT_DIR/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
     rm -rf ~/Library/Application\ Support/Code/User/snippets
     ln -sfnv $SCRIPT_DIR/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
@@ -33,7 +32,9 @@ else
   # for linux
   ln -sfnv $SCRIPT_DIR/brew/linuxbrew_init.sh ~/linuxbrew_init.sh
   if [ -d ~/.config/Code/User ]; then
+    touch $SCRIPT_DIR/vscode/settings.json
     ln -sfnv $SCRIPT_DIR/vscode/settings.json ~/.config/Code/User/settings.json
+    touch $SCRIPT_DIR/vscode/keybindings.json
     ln -sfnv $SCRIPT_DIR/vscode/keybindings.json ~/.config/Code/User/keybindings.json
     rm -rf ~/.config/Code/User/snippets
     ln -sfnv $SCRIPT_DIR/vscode/snippets ~/.config/Code/User/snippets
