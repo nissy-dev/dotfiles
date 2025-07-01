@@ -1,5 +1,7 @@
-nodejs latest
-rust latest
-golang latest
-direnv latest
-kubectl latest
+nodejs
+rust
+golang
+direnv
+kubectl
+awscli
+gcloud

@@ -12,8 +12,7 @@ dotfiles:
 
 .PHONY: asdf
 asdf:
-	echo 'Install languages by asdf.'
-	$(DOTFILES_DIR)/asdf/install_lang.sh
+	echo 'Install language plugin by asdf.'
 
 .PHONY: mac
 mac:

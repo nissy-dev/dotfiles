@@ -51,19 +51,10 @@ $ source ~/.zshrc
 $ make mac
 ```
 
-### 各言語のインストール
-
-[.tool-versions](https://github.com/nissy-dev/dotfiles/blob/master/asdf/.tool-versions) に記載されている各言語をインストール
+### asdf の設定
 
 ```sh
 $ make asdf
-```
-
-また必要であれば、GCloud CLI / AWS CLIのインストールもできる
-
-```sh
-$ asdf plugin add gcloud && asdf install gcloud latest
-$ asdf plugin add awscli && asdf install awscli latest
 ```
 
 ### IME のインストール
