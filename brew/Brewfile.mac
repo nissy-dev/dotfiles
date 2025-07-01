@@ -12,6 +12,7 @@ brew "git-delta"
 brew "git-lfs"
 brew "grep"
 brew "htop"
+brew "httpie"
 brew "gh"
 brew "jq"
 brew "lsd"
@@ -39,28 +40,16 @@ brew "xz"
 brew "zlib"
 
 cask "1password"
-cask "alfred"
-cask "cheatsheet"
-cask "clipy"
+cask "raycast"
+cask "discord"
 cask "docker"
 cask "google-chrome"
 cask "iterm2"
-cask "kap"
-cask "kindle"
-cask "skitch"
 cask "slack"
 cask "visual-studio-code"
-cask "zoom"
 
 # for App
 # brew "mas"
 # mas "Amphetamine", id: 937984704
-# mas "GoodNotes", id: 1444383602
 # mas "LINE", id: 539883307
 # mas "Magnet", id: 441258766
-
-# for React Native
-# brew "watchman"
-# cask "adoptopenjdk/openjdk/adoptopenjdk8"
-# cask "android-studio"
-# mas "Xcode", id: 497799835
