@@ -12,5 +12,4 @@ do
 
   asdf plugin add ${array[0]}
   asdf install ${array[0]} ${array[1]}
-  asdf global ${array[0]} ${array[1]}
 done

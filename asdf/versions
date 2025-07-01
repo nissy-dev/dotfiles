@@ -1,9 +1,5 @@
 nodejs latest
-deno latest
-python miniconda3-latest
 rust latest
 golang latest
-java adoptopenjdk-17.0.1+12
-kotlin latest
 direnv latest
 kubectl latest
