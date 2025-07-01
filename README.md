@@ -51,14 +51,6 @@ $ source ~/.zshrc
 $ make mac
 ```
 
-### フォントの設定
-
-[「白源」](https://github.com/yuru7/HackGen)をインストール
-
-```sh
-$ make font
-```
-
 ### 各言語のインストール
 
 [.tool-versions](https://github.com/nissy-dev/dotfiles/blob/master/asdf/.tool-versions) に記載されている各言語をインストール
