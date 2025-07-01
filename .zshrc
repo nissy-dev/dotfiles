@@ -41,11 +41,6 @@ if [ -f ~/google-cloud-sdk/completion.zsh.inc ]; then
   . ~/google-cloud-sdk/completion.zsh.inc
 fi
 
-## starship
-if type "starship" >/dev/null 2>&1; then
-  eval "$(starship init zsh)"
-fi
-
 ## direenv
 if type "direnv" >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
@@ -56,11 +51,12 @@ if [ -f ~/.fzf.zsh ]; then
   . ~/.fzf.zsh
 fi
 
-## load completions
-if [ -e ~/.zsh/completions ]; then
-  fpath=(~/.zsh/completions $fpath)
-  autoload -Uz compinit && compinit -i
+## coreutils
+if [ "$(uname)" = 'Darwin' ]; then
+  export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+  export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
 fi
+
 
 ##################################
 # シェル全般の設定
@@ -95,19 +91,6 @@ alias grep='grep --color'
 alias virc='vi ~/.zshrc'
 alias uprc='source ~/.zshrc'
 
-# Rust製コマンド
-if type "lsd" >/dev/null 2>&1; then
-  alias ls='lsd'
-fi
-
-if type "bat" >/dev/null 2>&1; then
-  alias cat='bat'
-fi
-
-if type "fd" >/dev/null 2>&1; then
-  alias find='fd'
-fi
-
 ##################################
 # docker 関連のエイリアス
 ##################################
@@ -125,12 +108,6 @@ alias kb='kubectl'
 # git 関連のエイリアス
 ##################################
 
-# forkしたリポジトリのupstreamに、fork元のリポジトリを登録する
-alias fork-init='npx git-upstream --set'
-
-# fork元の変更を自分のリポジトリに取り込む
-alias fork-update='git fetch upstream && git merge upstream/master'
-
 # マージ済みのブランチをローカルから削除
 alias br-clean='git branch --merged | grep -vE "^\*|master$|develop$|main$" | xargs -I % git branch -d %'
 
@@ -146,24 +123,6 @@ git-ck() {
   branch=$(echo "$branches" |
            fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
-}
-
-# Install one or more versions of specified language
-# e.g. `asdf-in rust` # => fzf multimode, tab to mark, enter to install
-asdf-in() {
-  local lang=${1}
-
-  if [[ ! $lang ]]; then
-    lang=$(asdf plugin-list | fzf)
-  fi
-
-  if [[ $lang ]]; then
-    local versions=$(asdf list-all $lang | tail -r | fzf -m)
-    if [[ $versions ]]; then
-      for version in $(echo $versions);
-      do; asdf install $lang $version; done;
-    fi
-  fi
 }
 
 # run npm script (requires jq)
@@ -192,9 +151,6 @@ fcd() {
 kill-by-port() {
   lsof -P | grep $1 | awk '{print $2}' | xargs kill -9
 }
-
-# conda有効化
-alias conda-init='eval "$(conda shell.zsh hook)"'
 
 ##################################
 # 独自設定の読み込み

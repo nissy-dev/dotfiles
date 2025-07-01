@@ -12,10 +12,6 @@ ln -sfnv $SCRIPT_DIR/.gitconfig ~/.gitconfig
 ln -sfnv $SCRIPT_DIR/.gitignore_global ~/.gitignore_global
 ln -sfnv $SCRIPT_DIR/.vimrc ~/.vimrc
 ln -sfnv $SCRIPT_DIR/.zshrc ~/.zshrc
-ln -sfnv $SCRIPT_DIR/.npm-init.js ~/.npm-init.js
-ln -sfnv $SCRIPT_DIR/starship.toml ~/.config/starship.toml
-ln -sfnv $SCRIPT_DIR/.tmux.conf ~/.tmux.conf
-ln -sfnv $SCRIPT_DIR/.czrc ~/.czrc
 ln -sfnv $SCRIPT_DIR/asdf/.asdfrc ~/.asdfrc
 
 if [ "$(uname)" = 'Darwin' ]; then
@@ -25,8 +21,6 @@ if [ "$(uname)" = 'Darwin' ]; then
     ln -sfnv $SCRIPT_DIR/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
     touch ~/Library/Application\ Support/Code/User/keybindings.json
     ln -sfnv $SCRIPT_DIR/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-    rm -rf ~/Library/Application\ Support/Code/User/snippets
-    ln -sfnv $SCRIPT_DIR/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
   fi
 else
   # for linux
@@ -36,7 +30,5 @@ else
     ln -sfnv $SCRIPT_DIR/vscode/settings.json ~/.config/Code/User/settings.json
     touch $SCRIPT_DIR/vscode/keybindings.json
     ln -sfnv $SCRIPT_DIR/vscode/keybindings.json ~/.config/Code/User/keybindings.json
-    rm -rf ~/.config/Code/User/snippets
-    ln -sfnv $SCRIPT_DIR/vscode/snippets ~/.config/Code/User/snippets
   fi
 fi

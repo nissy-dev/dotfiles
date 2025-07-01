@@ -21,47 +21,12 @@
 - システム環境設定 > サウンド > サウンドエフェクト
   - 「起動時にサウンドを再生」をOFF
 
-### ssh の設定
-
-鍵の生成と[GitHub SSH keys](https://github.com/settings/keys)への公開鍵の登録
-
-```sh
-$ ssh-keygen -t ed25519 -C "nd.12021218@gmail.com"
-$ pbcopy < ~/.ssh/id_ed25519.pub
-```
-
-`.ssh/config`の作成。
-
-```sh
-$ vi ~/.ssh/config
-$ chmod 600 ~/.ssh/config
-```
-
-`.ssh/config`には以下の内容を書き込む
-
-```
-Host *
-    AddKeysToAgent yes
-    UseKeychain yes
-    IdentityFile ~/.ssh/id_ed25519
-```
-
-接続の確認
-
-```sh
-$ eval "$(ssh-agent -s)"
-$ ssh-add ~/.ssh/id_ed25519
-$ ssh -T git@github.com
-```
-
-詳細は[Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)を確認すると良い。
-
 ### Homebrewでツールのインストール
 
 ```sh
 $ mkdir -p ~/code/github.com/nissy-dev/dotfiles
 $ cd ~/code/github.com/nissy-dev/dotfiles 
-$ git clone git@github.com:nissy-dev/dotfiles.git .
+$ git clone https://github.com/nissy-dev/dotfiles.git
 $ make brew
 ```
 
@@ -109,15 +74,6 @@ $ asdf plugin add gcloud && asdf install gcloud latest
 $ asdf plugin add awscli && asdf install awscli latest
 ```
 
-### iTermの設定
-
-`com.googlecode.iterm2.plist`を読み込む
-
-- General > Preferences
-  - Load preferences from a custom folder or URL にチェック
-  - パスを `~/code/github.com/nissy-dev/dotfiles`、Save changes を 「Manually」に設定する
-  - OSを再起動すると読み込まれる
-
 ### IME のインストール
 
 Google の日本語 IME は、次のサイトからインストールできる。  
@@ -129,21 +85,4 @@ Homebrew 経由ではうまくインストールできなかったため手動�
 - Codeコマンドをインストール
   - Command + P で `> code`と打ち込むと出てくる
 - 拡張機能をインストール
-  - `make code`でインストールできる
-
-### その他の設定
-
-パッケージマネージャーも必要があれば最新にしておく
-
-```sh
-$ npm install -g npm@latest
-$ npm install -g commitizen cz-conventional-changelog prettier
-$ asdf reshim nodejs
-```
-
-```sh
-$ conda-init
-$ pip install --upgrade pip
-$ pip install flake8 black numpy pandas jupyterlab
-$ asdf reshim python
-```
+  - `make code` でインストールできる
