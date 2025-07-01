@@ -1,85 +1,98 @@
 {
-    "workbench.startupEditor": "none", // Welcome Page を表示しない
-    "workbench.iconTheme": "material-icon-theme",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue", // 拡張機能のサジェストで上書きする
-    /* editor setting */
-    "editor.formatOnSave": true, // ファイル保存時にフォーマット
-    "editor.fontFamily": "'HackGen35Nerd Console', Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "editor.minimap.enabled": false, // ミニマップを非表示
-    "editor.renderWhitespace": "all", // ホワイトスペース（半角スペース等）の表示
-    "editor.renderControlCharacters": true, // 制御文字表示
-    "editor.suggestSelection": "first", // サジェストの表示方法
-    "editor.tabSize": 2,
-    /* files setting */
-    "files.trimTrailingWhitespace": true, // 余分なホワイトスペースを削除
-    "files.insertFinalNewline": true, // ファイルの末尾は改行で終わらせる
-    "files.trimFinalNewlines": true, // 保存時に最終行以降を削除
-    "files.associations": {
-        ".*lintrc": "json",
-        "*.flow": "javascript"
-    },
-    /* markdown setting */
-    "[markdown]": {
-        "editor.formatOnSave": false,
-        "files.trimTrailingWhitespace": false // Markdownのファイルは行末の空白をトリミングしない
-    },
-    /* json setting */
-    "[json]": {
-        "editor.tabSize": 4,
-    },
-    /* javascript setting */
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッタをprettierに指定
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": true // ファイル保存時にESLintでフォーマット
-        }
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": true
-        }
-    },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    /* typescript setting */
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": true
-        }
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": true
-        }
-    },
-    "typescript.locale": "en", // エラーメッセージを英語にする
-    "typescript.tsdk": "node_modules/typescript/lib",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    /* python setting */
-    "[python]": {
-        "editor.tabSize": 4,
-    },
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [
-        "--ignore=E501,W503"
-    ],
-    "python.formatting.provider": "black",
-    "python.languageServer": "Default",
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
-    /* GitHub Copilot */
-    "editor.inlineSuggest.enabled": true,
-    /* Ignore files related to Java */
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "window.zoomLevel": 1,
+  "workbench.startupEditor": "none", // Welcome Page を表示しない
+  "workbench.iconTheme": "material-icon-theme",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue", // 拡張機能のサジェストで上書きする
+  /* editor setting */
+  "editor.formatOnSave": true, // ファイル保存時にフォーマット
+  "editor.fontFamily": "'HackGen35Nerd Console', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false, // ミニマップを非表示
+  "editor.renderWhitespace": "all", // ホワイトスペース（半角スペース等）の表示
+  "editor.renderControlCharacters": true, // 制御文字表示
+  "editor.suggestSelection": "first", // サジェストの表示方法
+  "editor.tabSize": 2,
+  /* files setting */
+  "files.trimTrailingWhitespace": true, // 余分なホワイトスペースを削除
+  "files.insertFinalNewline": true, // ファイルの末尾は改行で終わらせる
+  "files.trimFinalNewlines": true, // 保存時に最終行以降を削除
+  "files.associations": {
+    ".*lintrc": "json",
+    "*.flow": "javascript"
+  },
+  /* markdown setting */
+  "[markdown]": {
+    "editor.formatOnSave": false,
+    "files.trimTrailingWhitespace": false // Markdownのファイルは行末の空白をトリミングしない
+  },
+  /* json setting */
+  "[json]": {
+    "editor.tabSize": 4
+  },
+  /* javascript setting */
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッタをprettierに指定
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  /* typescript setting */
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": "explicit"
+    }
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": "explicit"
+    }
+  },
+  "typescript.locale": "en", // エラーメッセージを英語にする
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  /* python setting */
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
+  },
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": ["--ignore=E501,W503"],
+  "python.formatting.provider": "black",
+  "python.languageServer": "Default",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  /* GitHub Copilot */
+  "editor.inlineSuggest.enabled": true,
+  /* Ignore files related to Java */
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "window.zoomLevel": 1,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.nextEditSuggestions.enabled": true
 }
