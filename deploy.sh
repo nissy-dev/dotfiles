@@ -12,7 +12,6 @@ ln -sfnv $SCRIPT_DIR/.gitconfig ~/.gitconfig
 ln -sfnv $SCRIPT_DIR/.gitignore_global ~/.gitignore_global
 ln -sfnv $SCRIPT_DIR/.vimrc ~/.vimrc
 ln -sfnv $SCRIPT_DIR/.zshrc ~/.zshrc
-ln -sfnv $SCRIPT_DIR/asdf/.asdfrc ~/.asdfrc
 
 if [ "$(uname)" = 'Darwin' ]; then
   # for mac
