@@ -11,19 +11,4 @@ brew "pstree"
 brew "tree"
 brew "wget"
 brew "zsh"
-
-# for asdf
-brew "asdf"
-# nodejs
-brew "gpg"
-brew "gawk"
-# pyenv
-brew "bzip2"
-brew "libffi"
-brew "libxml2"
-brew "libxmlsec1"
-brew "openssl"
-brew "readline"
-brew "sqlite"
-brew "xz"
-brew "zlib"
+brew "mise"

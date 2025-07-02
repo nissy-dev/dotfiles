@@ -51,12 +51,6 @@ $ source ~/.zshrc
 $ make mac
 ```
 
-### asdf の設定
-
-```sh
-$ make asdf
-```
-
 ### IME のインストール
 
 Google の日本語 IME は、次のサイトからインストールできる。  

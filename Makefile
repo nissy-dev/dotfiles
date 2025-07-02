@@ -10,11 +10,6 @@ dotfiles:
 	echo 'Setup dotfiles.'
 	$(DOTFILES_DIR)/deploy.sh
 
-.PHONY: asdf
-asdf:
-	echo 'Install language plugin by asdf.'
-	$(DOTFILES_DIR)/asdf/install_plugin.sh
-
 .PHONY: mac
 mac:
 	echo 'Override the default settings on Mac.'

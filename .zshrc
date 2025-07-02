@@ -14,8 +14,8 @@ else
 fi
 
 ## 各言語の設定
-if type "asdf" >/dev/null 2>&1; then
-  . $(brew --prefix asdf)/libexec/asdf.sh
+if type "mise" >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
 fi
 
 ## android studio
