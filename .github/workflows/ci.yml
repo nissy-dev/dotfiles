@@ -10,20 +10,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [macos-latest]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - name: brew install for MacOS
         if: runner.os == 'macOS'
         run: |
-          sed '/^cask/d' ./brew/Brewfile.mac > ./brew/Brewfile.mac.tmp
-          brew bundle --file ./brew/Brewfile.mac.tmp
-      - name: brew install for Linux
-        if: runner.os == 'Linux'
-        run: |
-          sudo apt-get update
-          sudo apt-get install build-essential curl file git
-          make brew
+          sed '/^cask/d' ./brew/Brewfile > ./brew/Brewfile.tmp
+          brew bundle --file ./brew/Brewfile.tmp
       - name: setup dotfiles
         run: make dotfiles
       - name: Override the default settings on Mac

@@ -76,6 +76,7 @@
 [ghq]
   root = ~/code
 
+# 1Password の SSH 鍵を GPG 署名に使うための設定
 [gpg]
   format = ssh
 [gpg "ssh"]

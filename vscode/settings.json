@@ -83,8 +83,16 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
+  /* go setting */
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
   /* GitHub Copilot */
   "editor.inlineSuggest.enabled": true,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
   /* Ignore files related to Java */
   "files.exclude": {
     "**/.classpath": true,
@@ -93,6 +101,5 @@
     "**/.factorypath": true
   },
   "window.zoomLevel": 1,
-  "github.copilot.editor.enableAutoCompletions": true,
-  "github.copilot.nextEditSuggestions.enabled": true
+  "search.followSymlinks": false
 }

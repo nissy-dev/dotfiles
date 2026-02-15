@@ -15,10 +15,5 @@ else
 fi
 
 echo 'Install packages.'
-if [ "$(uname)" = 'Darwin' ]; then
-  eval $(/opt/homebrew/bin/brew shellenv)
-  brew bundle --file $SCRIPT_DIR/Brewfile.mac -v
-else
-  . $SCRIPT_DIR/linuxbrew_init.sh
-  brew bundle --file $SCRIPT_DIR/Brewfile.linux -v
-fi
+eval $(/opt/homebrew/bin/brew shellenv)
+brew bundle --file $SCRIPT_DIR/Brewfile -v

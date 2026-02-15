@@ -4,7 +4,6 @@ tap "homebrew/core"
 
 brew "coreutils"
 brew "findutils"
-brew "bat"
 brew "fzf"
 brew "fontconfig"
 brew "ghq"
@@ -20,18 +19,14 @@ brew "tree"
 brew "wget"
 brew "zsh"
 brew "mise"
+brew "starship"
+brew "1password-cli"
 
 cask "1password"
 cask "raycast"
 cask "discord"
-cask "docker"
+cask "orbstack"
 cask "google-chrome"
-cask "warp"
+cask "ghosty"
 cask "slack"
 cask "visual-studio-code"
-
-# for App
-# brew "mas"
-# mas "Amphetamine", id: 937984704
-# mas "LINE", id: 539883307
-# mas "Magnet", id: 441258766

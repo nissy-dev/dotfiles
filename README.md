@@ -1,7 +1,5 @@
 # dotfiles
 
-**注意：スクリプトは、Mac or Linuxで動かすことを想定して書いている**
-
 ## 環境構築手順
 
 ### 諸々の設定
@@ -28,12 +26,6 @@ $ mkdir -p ~/code/github.com/nissy-dev/dotfiles
 $ cd ~/code/github.com/nissy-dev/dotfiles 
 $ git clone https://github.com/nissy-dev/dotfiles.git
 $ make brew
-```
-
-Linux の場合は、ドキュメントの [Requirements](https://docs.brew.sh/Homebrew-on-Linux#requirements) に記載されているビルドツールをインストールしておく必要がある
-
-```bash
-sudo apt-get install build-essential procps curl file git
 ```
 
 ### dotfilesの設定
@@ -63,3 +55,17 @@ Homebrew 経由ではうまくインストールできなかったため手動�
   - Command + P で `> code`と打ち込むと出てくる
 - 拡張機能をインストール
   - `make code` でインストールできる
+
+### 1Password の設定
+
+- [Chrome 拡張](https://chromewebstore.google.com/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa)をインストール
+- [ssh agent の設定](https://blog.jxck.io/entries/2025-11-13/ssh-signing.html)
+
+### グローバルに入れそうなツール
+
+```sh
+$ mise use -g go@latest
+$ mise use -g aws-cli@latest
+$ mise use -g gcloud@latest
+$ mise use -g terraform@latest
+```

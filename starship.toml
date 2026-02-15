@@ -1,0 +1,23 @@
+[character]
+success_symbol = "🐧 [❯](bold green)"
+error_symbol = "🐧 [❯](bold red)"
+
+[directory]
+truncation_length = 10
+truncate_to_repo = false
+
+[git_metrics]
+disabled = false
+
+[git_status]
+disabled = true
+
+[username]
+style_user = "white bold"
+format = "[$user]($style): "
+show_always = true
+
+[time]
+disabled = false
+format = "[$time]($style) "
+time_format = '%R'

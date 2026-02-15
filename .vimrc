@@ -1,5 +1,3 @@
-"encoding
-set encoding=utf-8
 scriptencoding utf-8
 
 "show cusor
@@ -9,35 +7,16 @@ set number
 
 "background color
 set background=dark
-"colorscheme
-let g:hybrid_use_iTerm_colors = 1
-colorscheme hybrid
 
 "hilight cursorline
-autocmd ColorScheme * highlight LineNr ctermfg=12
-highlight CursorLineNr ctermbg=4 ctermfg=0
 set cursorline
-highlight clear CursorLine
 
 "enable syntax
 syntax enable
 
-"indent, tab
+"indent
 set autoindent
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set expandtab
-set smarttab
-
-"wrap long lines
-set wrap
-
-"complement filename
-set wildmode=list:longest,full
-
-"show vim command
-set showcmd
+set shiftwidth=2
 
 "clipboard
 set clipboard=unnamed,autoselect
@@ -45,16 +24,5 @@ set clipboard=unnamed,autoselect
 "cursor movement
 set whichwrap=b,s,h,l,<,>,~,[,]
 
-"show long lines
-set display=lastline
-
 "setting for backup files
 set nobackup
-
-"other
-set ignorecase
-set wrapscan
-set hlsearch
-set backspace=indent,eol,start
-set nrformats-=octal
-set pumheight=10

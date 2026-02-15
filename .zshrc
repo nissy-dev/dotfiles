@@ -3,47 +3,18 @@
 ##################################
 
 ## Homebrew
-if [ "$(uname)" = 'Darwin' ]; then
-  if [ -f /opt/homebrew/bin/brew ]; then
-    eval $(/opt/homebrew/bin/brew shellenv)
-  fi
-else
-  if [ -f ~/linuxbrew_init.sh ]; then
-    . ~/linuxbrew_init.sh
-  fi
+if [ -f /opt/homebrew/bin/brew ]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
-## 各言語の設定
+## mise
 if type "mise" >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
 
-## android studio
-if [ "$(uname)" = 'Darwin' ]; then
-  export ANDROID_HOME=$HOME/Library/Android/sdk # for mac
-else
-  export ANDROID_HOME=$HOME/Android/Sdk # for linux
-fi
-
-if [ -d "$ANDROID_HOME" ]; then
-  export PATH=$PATH:$ANDROID_HOME/emulator
-  export PATH=$PATH:$ANDROID_HOME/tools
-  export PATH=$PATH:$ANDROID_HOME/tools/bin
-  export PATH=$PATH:$ANDROID_HOME/platform-tools
-fi
-
-## google cloud sdk
-if [ -f ~/google-cloud-sdk/path.zsh.inc ]; then
-  . ~/google-cloud-sdk/path.zsh.inc
-fi
-
-if [ -f ~/google-cloud-sdk/completion.zsh.inc ]; then
-  . ~/google-cloud-sdk/completion.zsh.inc
-fi
-
-## direenv
-if type "direnv" >/dev/null 2>&1; then
-  eval "$(direnv hook zsh)"
+## starship
+if type "starship" >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
 fi
 
 ## fzf
@@ -52,10 +23,8 @@ if [ -f ~/.fzf.zsh ]; then
 fi
 
 ## coreutils
-if [ "$(uname)" = 'Darwin' ]; then
-  export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-  export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
-fi
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
 
 
 ##################################
@@ -116,19 +85,10 @@ alias br-clean='git branch --merged | grep -vE "^\*|master$|develop$|main$" | xa
 # fzf の便利関数
 ##################################
 
-# fbr - checkout git branch (including remote branches), sorted by most recent commit, limit 30 last branches
-git-ck() {
-  local branches branch
-  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
-  branch=$(echo "$branches" |
-           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
-  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
-}
-
 # run npm script (requires jq)
 npmr() {
   local script
-  script=$(cat package.json | jq -r '.scripts | keys[] ' | sort | fzf) && npm run $(echo "$script")
+  script=$(cat package.json | jq -r '.scripts | keys[] ' | sort | fzf) && pnpm run $(echo "$script")
 }
 
 # ghq + fzf
@@ -137,14 +97,6 @@ alias g='cd $(ghq root)/$(ghq list | fzf)'
 # fh - repeat history
 fh() {
   print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
-}
-
-# fd - cd to selected directory
-fcd() {
-  local dir
-  dir=$(/usr/bin/find ${1:-.} -path '*/\.*' -prune \
-                  -o -type d -print 2> /dev/null | fzf +m) &&
-  cd "$dir"
 }
 
 # port指定でプロセスを落とす
