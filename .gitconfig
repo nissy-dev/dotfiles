@@ -1,6 +1,7 @@
 [user]
   email = nd.12021218@gmail.com
   name = nissy-dev
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPe8AJBIcx3noNi2nYBETQB/US54cEgSykQXGqanezrS
 
 [core]
   editor = vi

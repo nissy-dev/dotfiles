@@ -10,7 +10,8 @@ truncate_to_repo = false
 disabled = false
 
 [git_status]
-disabled = true
+format = '([\[$staged\]]($style) )'
+staged = '[++\($count\)](green)'
 
 [username]
 style_user = "white bold"
@@ -21,3 +22,9 @@ show_always = true
 disabled = false
 format = "[$time]($style) "
 time_format = '%R'
+
+[docker_context]
+disabled = true
+
+[package]
+disabled = true

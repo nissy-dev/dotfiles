@@ -60,6 +60,7 @@ Homebrew 経由ではうまくインストールできなかったため手動�
 
 - [Chrome 拡張](https://chromewebstore.google.com/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa)をインストール
 - [ssh agent の設定](https://blog.jxck.io/entries/2025-11-13/ssh-signing.html)
+  - valut は `op vault list` で取得できる uuid で登録する
 
 ### グローバルに入れそうなツール
 
