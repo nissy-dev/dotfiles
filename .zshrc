@@ -10,6 +10,7 @@ fi
 ## mise
 if type "mise" >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
+  eval "$(mise activate --shims)"
 fi
 
 ## starship
@@ -26,6 +27,9 @@ fi
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
 
+## pnpm
+export PNPM_HOME="/Users/d002024/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
 
 ##################################
 # シェル全般の設定

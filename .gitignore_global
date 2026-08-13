@@ -5,3 +5,4 @@
 .worktree
 .logs
 .vscode/settings.json
+settings.local.json
