@@ -107,6 +107,7 @@
     "/^gh release (list|view)(\\s|$)/": true,
     "pnpm": true,
     "/^pnpm (install|i|add|dlx|exec)(\\s|$)/": false,
+    "/^mise exec(\\s|$)/": true,
     "make": true,
     "docker": true,
     "rg": true,
@@ -125,6 +126,7 @@
     "ps": true,
     "lsof": true,
     "netstat": true,
+    "test": true,
     "/^(rm|sudo)(\\s|$)/": false
   },
   "chat.tools.urls.autoApprove": {
