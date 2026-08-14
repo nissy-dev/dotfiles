@@ -128,6 +128,7 @@
     "/^(rm|sudo)(\\s|$)/": false
   },
   "chat.tools.urls.autoApprove": {
+    "https://code.visualstudio.com": true,
     "https://github.com/*": true,
     "https://docs.github.com/*": true,
     "https://developer.mozilla.org/*": true,
