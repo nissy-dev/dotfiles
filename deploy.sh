@@ -18,4 +18,6 @@ if [ -d ~/Library/Application\ Support/Code/User ]; then
   ln -sfnv $SCRIPT_DIR/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
   touch ~/Library/Application\ Support/Code/User/keybindings.json
   ln -sfnv $SCRIPT_DIR/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+  touch ~/Library/Application\ Support/Code/User/mcp.json
+  ln -sfnv $SCRIPT_DIR/vscode/mcp.json ~/Library/Application\ Support/Code/User/mcp.json
 fi
